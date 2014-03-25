@@ -10,3 +10,9 @@ body
 {
 	background: #df5a49;
 }
+.wrapper
+{
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1000px;
+}
