@@ -285,7 +285,7 @@ hr
 	color: #fff;
 }
 
-
+/*small screens*/
 @media only screen and (max-width: 960px) {
 	.menu
 	{
@@ -298,6 +298,7 @@ hr
 		margin-left: 125px;
 	}
 }
+/*tablet size*/
 @media only screen and (max-width: 650px) {
 	.menu
 	{
@@ -316,6 +317,7 @@ hr
 
 }
 
+/* mobile size*/
 @media only screen and (max-width: 441px) {
 	.name
 	{
@@ -335,6 +337,7 @@ hr
 	}
 }
 
+/* At height of menu, hide it and display moble (tbd)*/
 @media only screen and (max-height:620px){
 	.menu
 	{
