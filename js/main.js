@@ -15,15 +15,14 @@ function handleContentHeight(){
 	var contentHeight = $('.contentinner').height();
 	var viewableHeight = windowHeight - (footerHeight + headerHeight);
 
+	$('.overlap').height(documentHeight);
+
 	if(contentHeight < viewableHeight)
 	{
-		console.log('bigger than'+viewableHeight);
 		$('.content').height(viewableHeight);
-		$('.overlap').height(viewableHeight);
 	}
 	else
 	{
 		$('.content').height('');
-		$('.overlap').height('');
 	}
 }
