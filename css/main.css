@@ -16,7 +16,7 @@ body
 	font: 16px/24px 'Lato', sans-serif;
 	font-weight: 100;
 	/*min-width: 650px;*/
-	min-height: 450px;
+	/*min-height: 450px;*/
 	z-index: 10;
 }
 h1, h2, h3, h4, h5, h6
@@ -313,6 +313,10 @@ hr
 }
 
 @media only screen and (max-width: 445px) {
+	.name
+	{
+		margin-bottom: 0px;
+	}
 	.social
 	{
 		float: left;
@@ -324,7 +328,8 @@ hr
 		line-height: 60px
 	}
 }
-@media only screen and (max-width: 470px), only screen and (max-height:620px){
+
+@media only screen and (max-height:620px){
 	.menu
 	{
 		display: none;
