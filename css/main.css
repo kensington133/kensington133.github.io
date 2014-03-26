@@ -309,6 +309,10 @@ hr
 	{
 		margin-left: 0px;
 	}
+	.copy
+	{
+		margin-left: 20px;
+	}
 
 }
 
@@ -316,11 +320,13 @@ hr
 	.name
 	{
 		margin-bottom: 0px;
+		margin-left: 10px;
 	}
 	.social
 	{
 		float: left;
 		line-height: inherit;
+		margin-left: 5px;
 	}
 	.header
 	{
@@ -335,8 +341,7 @@ hr
 		display: none;
 	}
 	.content,
-	.footer,
-	.name
+	.footer
 	{
 		margin-left: 0px;
 	}
