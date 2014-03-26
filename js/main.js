@@ -13,7 +13,7 @@ function handleContentHeight(){
 	var documentHeight = $(document).height();
 	var footerHeight = $('.footer').height();
 	var headerHeight = $('.header').height();
-	var contentHeight = $('.contentinner').height();
+	var contentHeight = $('.content_inner').height();
 	var viewableHeight = windowHeight - (footerHeight + headerHeight);
 
 	//sets the overlapping backgrounds the the window height

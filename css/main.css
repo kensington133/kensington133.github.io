@@ -6,15 +6,133 @@
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
+/***
+TYPOGRAPHY ADAPTED FROM SKELETON CSS
+@http://www.getskeleton.com/#typography
+****/
 body
 {
 	background: #df5a49;
-	font-family: 'Lato', sans-serif;
+	font: 16px/24px 'Lato', sans-serif;
 	font-weight: 100;
-	min-width: 650px;
+	/*min-width: 650px;*/
 	min-height: 450px;
 	z-index: 10;
 }
+h1, h2, h3, h4, h5, h6
+{
+	color: #181818;
+	font-weight: 200;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+{
+	font-weight: inherit;
+}
+h1
+{
+	font-size: 46px;
+	line-height: 50px;
+	margin-bottom: 14px;
+	color: #45b29d;
+}
+h2
+{
+	font-size: 35px;
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+h3
+{
+	font-size: 28px;
+	line-height: 34px;
+	margin-bottom: 8px;
+}
+h4
+{
+	font-size: 21px;
+	line-height: 30px;
+	margin-bottom: 4px;
+}
+h5
+{
+	font-size: 17px;
+	line-height: 24px;
+}
+h6
+{
+	font-size: 14px;
+	line-height: 21px;
+}
+
+p
+{
+	margin: 0 0 20px 0;
+}
+p img
+{
+	margin: 0;
+}
+p.lead
+{
+	font-size: 21px;
+	line-height: 27px;
+	color: #777;
+}
+
+em
+{
+	font-style: italic;
+}
+strong
+{
+	font-weight: bold;
+	color: #333;
+}
+small
+{
+	font-size: 80%;
+}
+
+/*	Blockquotes  */
+blockquote, blockquote p
+{
+	font-size: 17px;
+	line-height: 24px;
+	color: #777;
+	font-style: italic;
+}
+blockquote
+{
+	margin: 0 0 20px;
+	padding: 9px 20px 0 19px;
+	border-left: 1px solid #ddd;
+}
+blockquote cite
+{
+	display: block;
+	font-size: 12px;
+	color: #555;
+}
+blockquote cite:before
+{
+	content: "\2014 \0020";
+}
+blockquote cite a,
+blockquote cite a:visited,
+blockquote cite a:visited
+{
+	color: #555;
+}
+
+hr
+{
+	border: solid #ddd;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: 10px 0 30px;
+	height: 0;
+}
+
 .clear
 {
 	clear: both;
@@ -105,6 +223,10 @@ body
 	background: #fff;
 	z-index: 100
 }
+.content_inner
+{
+	padding: 20px;
+}
 .overlap
 {
 	position: fixed;
@@ -146,6 +268,7 @@ body
 .copy
 {
 	line-height: 95px;
+	margin-bottom: 0px;
 }
 .footer_nav
 {
@@ -154,9 +277,63 @@ body
 	margin-right: 20px;
 	font-size: 14px;
 	margin-top: 4px;
+	line-height: 17px;
 }
 .footer_nav a
 {
 	text-decoration: none;
 	color: #fff;
+}
+
+
+@media only screen and (max-width: 960px) {
+	.menu
+	{
+	width: 125px;
+	}
+	.content,
+	.footer,
+	.name
+	{
+		margin-left: 125px;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.menu
+	{
+		display: none;
+	}
+	.content,
+	.footer,
+	.name
+	{
+		margin-left: 0px;
+	}
+
+}
+
+@media only screen and (max-width: 445px) {
+	.social
+	{
+		float: left;
+		line-height: inherit;
+	}
+	.header
+	{
+		height: 135px;
+		line-height: 60px
+	}
+}
+@media only screen and (max-width: 470px), only screen and (max-height:620px){
+	.menu
+	{
+		display: none;
+	}
+	.content,
+	.footer,
+	.name
+	{
+		margin-left: 0px;
+	}
+
 }
