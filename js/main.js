@@ -3,14 +3,7 @@ $(document).ready( function(){
 });
 
 $(window).resize(function(){
-	var windowHeight = $(window).height();
-	var documentHeight = $(document).height();
-	var footerHeight = $('.footer').height();
-	var headerHeight = $('.header').height();
-	var viewableHeight = windowHeight - (footerHeight + headerHeight);
-
-	console.log('Viewable height = '+viewableHeight)
-	console.log('Document height = '+documentHeight);
+	handleContentHeight();
 
 });
 
@@ -19,18 +12,18 @@ function handleContentHeight(){
 	var documentHeight = $(document).height();
 	var footerHeight = $('.footer').height();
 	var headerHeight = $('.header').height();
+	var contentHeight = $('.contentinner').height();
 	var viewableHeight = windowHeight - (footerHeight + headerHeight);
 
-	if(windowHeight > viewableHeight)
+	if(contentHeight < viewableHeight)
 	{
 		console.log('bigger than'+viewableHeight);
-		$('.content').height(documentHeight);
-		$('.overlap').height(documentHeight);
+		$('.content').height(viewableHeight);
+		$('.overlap').height(viewableHeight);
 	}
 	else
 	{
-		console.log('set to '+documentHeight);
-		$('.content').height(viewableHeight);
-		$('.overlap').height(viewableHeight);
+		$('.content').height('');
+		$('.overlap').height('');
 	}
 }
