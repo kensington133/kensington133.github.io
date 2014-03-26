@@ -127,13 +127,13 @@ body
 {
 	background: #efc94c;
 	z-index: -50;
-	margin-left: 30px;
+	margin-left: 20px;
 }
 .orange
 {
 	background: #e27a3f;
 	z-index: -75;
-	margin-left: 60px;
+	margin-left: 40px;
 }
 /******** FOOTER *********/
 .footer
