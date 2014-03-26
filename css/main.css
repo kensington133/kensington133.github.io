@@ -12,6 +12,7 @@ body
 	font-family: 'Lato', sans-serif;
 	font-weight: 100;
 	min-width: 650px;
+	z-index: 10;
 }
 .clear
 {
@@ -98,6 +99,24 @@ body
 	margin-left: 180px;
 	color: #525763;
 	background: #fff;
+	z-index: 100
+}
+.overlap
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+.yellow
+{
+	background: #efc94c;
+	z-index: 50;
+}
+.orange
+{
+	background: #e27a3f;
+	z-index: 25;
 }
 /******** FOOTER *********/
 .footer
