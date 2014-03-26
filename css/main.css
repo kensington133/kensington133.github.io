@@ -35,9 +35,7 @@ body
 /******** HEADER ************/
 .header
 {
-	/*margin-left: 180px;*/
 	background: #334d5c;
-	width: 100%;
 	height: 110px;
 	line-height: 110px;
 }
@@ -61,14 +59,11 @@ body
 /********* MENU ****************/
 .menu
 {
-	/*float: left;*/
-	/*min-height: 590px;*/
 	height: 100%;
 	position: fixed;
 	width: 180px;
 	padding-top: 120px;
 	background: #334d5c;
-
 }
 .menu_list
 {
@@ -103,19 +98,29 @@ body
 	margin-left: 180px;
 	color: #525763;
 	background: #fff;
-	max-width: 920px;
-	/*min-height: 481px;*/
-	height: 100%;
-	width: 100%;
 }
 /******** FOOTER *********/
 .footer
 {
 	margin-left: 180px;
 	height: 95px;
-	max-width: 920px;
-	width: 100%;
 	background: #334d5c;
 	color: #fff;
+}
+.copy
+{
 	line-height: 95px;
+}
+.footer_nav
+{
+	list-style: none;
+	text-align: right;
+	margin-right: 20px;
+	font-size: 14px;
+	margin-top: 4px;
+}
+.footer_nav a
+{
+	text-decoration: none;
+	color: #fff;
 }
