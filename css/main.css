@@ -14,15 +14,13 @@ body
 {
 	background: #df5a49;
 	font: 16px/24px 'Lato', sans-serif;
-	font-weight: 100;
-	/*min-width: 650px;*/
-	/*min-height: 450px;*/
+	/*font-weight: 300;*/
 	z-index: 10;
 }
 h1, h2, h3, h4, h5, h6
 {
 	color: #181818;
-	font-weight: 200;
+	font-weight: 400;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 {
@@ -168,6 +166,7 @@ hr
 	font-size: 48px;
 	color: #fff;
 	text-transform: uppercase;
+	font-weight: 300;
 }
 .social
 {
@@ -187,6 +186,7 @@ hr
 	width: 180px;
 	padding-top: 120px;
 	background: #334d5c;
+	font-weight: 200;
 }
 .menu_list
 {
@@ -347,6 +347,11 @@ hr
 	.footer
 	{
 		margin-left: 0px;
+	}
+	.name,
+	.copy
+	{
+		margin-left: 10px;
 	}
 
 }
