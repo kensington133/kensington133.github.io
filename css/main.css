@@ -336,6 +336,10 @@ hr
 	{
 		margin-left: 20px;
 	}
+	.header
+	{
+		margin-top: 39px;
+	}
 }
 
 /* mobile size*/
@@ -354,7 +358,8 @@ hr
 	.header
 	{
 		height: 135px;
-		line-height: 60px
+		line-height: 60px;
+		margin-top: 39px;
 	}
 	.menu
 	{
