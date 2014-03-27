@@ -38,8 +38,4 @@ function mobileMenu()
 			width: 'toggle'
 		}, 'easeOutQuart');
 	});
-	if($('.menu').is(':visible'))
-	{
-		$('body').css({overflow: 'hidden'});
-	}
 }

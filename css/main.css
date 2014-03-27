@@ -172,7 +172,7 @@ hr
 	display: none;
 	padding: 10px;
 	margin-bottom: 0px;
-	font-weight: 200;
+	font-weight: 400;
 	text-transform: uppercase;
 }
 .name
@@ -337,11 +337,6 @@ hr
 	{
 		margin-left: 20px;
 	}
-	.header
-	{
-		margin-top: 39px;
-	}
-
 }
 
 /* mobile size*/
@@ -391,6 +386,10 @@ hr
 	.copy
 	{
 		margin-left: 10px;
+	}
+	.header
+	{
+		margin-top: 39px;
 	}
 
 }
