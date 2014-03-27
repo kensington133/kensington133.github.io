@@ -1,5 +1,6 @@
 $(document).ready( function(){
 	handleContentHeight();
+	mobileMenu();
 });
 
 $(window).resize(function(){
@@ -28,4 +29,13 @@ function handleContentHeight(){
 	{
 		$('.content').height('');
 	}
+}
+
+function mobileMenu()
+{
+	$('.menu_toggle').click( function(){
+		$('.menu').animate({
+			width: 'toggle'
+		}, 'easeOutQuart');
+	});
 }

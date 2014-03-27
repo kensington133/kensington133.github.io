@@ -160,6 +160,16 @@ hr
 	height: 110px;
 	line-height: 110px;
 }
+.menu_toggle
+{
+	line-height: normal;
+	color: #fff;
+	background: #18252d;
+	display: none;
+	padding: 10px;
+	margin-bottom: 0px;
+	z-index: 999;
+}
 .name
 {
 	margin-left: 180px;
@@ -198,6 +208,10 @@ hr
 	color: #fff;
 	font-size: 18px;
 	text-transform: uppercase;
+}
+.menu_item:hover
+{
+	text-decoration: underline;
 }
 .menu_item.selected
 {
@@ -300,6 +314,10 @@ hr
 }
 /*tablet size*/
 @media only screen and (max-width: 650px) {
+	.menu_toggle
+	{
+		display: block;
+	}
 	.menu
 	{
 		display: none;
@@ -334,6 +352,14 @@ hr
 	{
 		height: 135px;
 		line-height: 60px
+	}
+	.menu
+	{
+		padding-top: 74px;
+	}
+	.menu_list li
+	{
+		margin-bottom: -10px;
 	}
 }
 
