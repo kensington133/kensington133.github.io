@@ -14,7 +14,6 @@ body
 {
 	background: #df5a49;
 	font: 16px/24px 'Lato', sans-serif;
-	/*font-weight: 300;*/
 	z-index: 10;
 }
 h1, h2, h3, h4, h5, h6
@@ -168,7 +167,6 @@ hr
 	width: 100%;
 	text-align: center;
 	color: #fff;
-	/*background: #18252d;*/
 	background: #45b29d;
 	display: none;
 	padding: 10px;
@@ -368,7 +366,7 @@ hr
 	}
 }
 
-/* At height of menu, hide it and display moble (tbd)*/
+/* At height of menu, go to mobile view*/
 @media only screen and (max-height:620px){
 	.menu_toggle
 	{
