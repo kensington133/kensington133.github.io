@@ -19,7 +19,7 @@ body
 }
 h1, h2, h3, h4, h5, h6
 {
-	color: #181818;
+	color: #45b29d;
 	font-weight: 400;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
@@ -31,7 +31,6 @@ h1
 	font-size: 46px;
 	line-height: 50px;
 	margin-bottom: 14px;
-	color: #45b29d;
 }
 h2
 {
@@ -163,12 +162,18 @@ hr
 .menu_toggle
 {
 	line-height: normal;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	text-align: center;
 	color: #fff;
-	background: #18252d;
+	/*background: #18252d;*/
+	background: #45b29d;
 	display: none;
 	padding: 10px;
 	margin-bottom: 0px;
-	z-index: 999;
+	font-weight: 200;
+	text-transform: uppercase;
 }
 .name
 {
@@ -332,6 +337,10 @@ hr
 	{
 		margin-left: 20px;
 	}
+	.header
+	{
+		margin-top: 39px;
+	}
 
 }
 
@@ -365,6 +374,10 @@ hr
 
 /* At height of menu, hide it and display moble (tbd)*/
 @media only screen and (max-height:620px){
+	.menu_toggle
+	{
+		display: block;
+	}
 	.menu
 	{
 		display: none;
