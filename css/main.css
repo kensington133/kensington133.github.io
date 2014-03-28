@@ -175,6 +175,10 @@ hr
 	font-weight: 400;
 	text-transform: uppercase;
 }
+.arrow
+{
+	font-size: 12px;
+}
 .name
 {
 	margin-left: 180px;
@@ -414,14 +418,6 @@ hr
 		height: 135px;
 		line-height: 60px;
 		margin-top: 39px;
-	}
-	.menu
-	{
-		padding-top: 74px;
-	}
-	.menu_list li
-	{
-		margin-bottom: -10px;
 	}
 }
 
