@@ -37,6 +37,9 @@ function mobileMenu()
 		// $('.menu').animate({
 		// 	width: 'toggle'
 		// }, 'easeOutQuart');
-		$('.menu').slideToggle();
+		$('.menu').slideToggle( function(){
+		// $('.arrow').html('&#x25B2');
+		 $(".arrow").html($('.menu').is(':visible') ? '&#x25B2;' : '&#x25BC;');
+		});
 	});
 }
