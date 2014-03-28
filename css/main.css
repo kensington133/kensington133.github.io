@@ -15,6 +15,7 @@ body
 	background: #df5a49;
 	font: 16px/24px 'Lato', sans-serif;
 	z-index: 10;
+	max-height:
 }
 h1, h2, h3, h4, h5, h6
 {
@@ -206,6 +207,13 @@ hr
 {
 	list-style: none;
 }
+.menu_list li
+{
+	background: url('../img/menubg.png') no-repeat;
+	height: 77px;
+	line-height: 77px;
+	margin-left: -22px;
+}
 .menu_item
 {
 	text-decoration: none;
@@ -221,18 +229,10 @@ hr
 {
 	font-weight: 400;
 }
-.menu_list li
-{
-	background: url('../img/menubg.png') no-repeat;
-	height: 77px;
-	line-height: 77px;
-	margin-left: -22px;
-}
 .menu_text
 {
 	margin-left: 35px;
 }
-
 /******** CONTENT *********/
 .content
 {
@@ -244,6 +244,32 @@ hr
 .content_inner
 {
 	padding: 20px;
+}
+.column
+{
+	float: left;
+	height: 100%;
+}
+.column_with_img
+{
+	float: left;
+	height: 100%;
+	text-align: center;
+}
+
+.wide
+{
+	width: 65%;
+	margin-right: 5%;
+}
+.narrow
+{
+	width: 30%;
+}
+.scaleimg
+{
+	max-width: 100%;
+	height: auto;
 }
 .overlap
 {
@@ -307,7 +333,7 @@ hr
 @media only screen and (max-width: 960px) {
 	.menu
 	{
-	width: 125px;
+		width: 125px;
 	}
 	.content,
 	.footer,
@@ -325,6 +351,28 @@ hr
 	.menu
 	{
 		display: none;
+		width: 100%;
+		position: fixed;
+		top: 39px;
+		padding-top: 0px;
+		text-align: center;
+		height: auto;
+	}
+	.menu_list li
+	{
+		background: url() #45b29d;
+		margin-left: 0px;
+		height: 40px;
+		line-height: 40px;
+		margin-bottom: 2px;
+	}
+	.menu_list li:first-child
+	{
+		margin-top: 2px;
+	}
+	.menu_text
+	{
+		margin-left: 0px;
 	}
 	.content,
 	.footer,
@@ -339,6 +387,12 @@ hr
 	.header
 	{
 		margin-top: 39px;
+	}
+	.column,
+	.column_with_img
+	{
+		float: none;
+		width: 100%;
 	}
 }
 
@@ -380,6 +434,28 @@ hr
 	.menu
 	{
 		display: none;
+		width: 100%;
+		position: fixed;
+		top: 39px;
+		padding-top: 0px;
+		text-align: center;
+		height: auto;
+	}
+	.menu_list li
+	{
+		background: url() #45b29d;
+		margin-left: 0px;
+		height: 40px;
+		line-height: 40px;
+		margin-bottom: 2px;
+	}
+	.menu_list li:first-child
+	{
+		margin-top: 2px;
+	}
+	.menu_text
+	{
+		margin-left: 0px;
 	}
 	.content,
 	.footer
