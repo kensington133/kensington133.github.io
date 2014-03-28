@@ -34,11 +34,7 @@ function handleContentHeight(){
 function mobileMenu()
 {
 	$('.menu_toggle').click( function(){
-		// $('.menu').animate({
-		// 	width: 'toggle'
-		// }, 'easeOutQuart');
 		$('.menu').slideToggle( function(){
-		// $('.arrow').html('&#x25B2');
 		 $(".arrow").html($('.menu').is(':visible') ? '&#x25B2;' : '&#x25BC;');
 		});
 	});
