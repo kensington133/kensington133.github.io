@@ -128,6 +128,28 @@ hr
 	margin: 10px 0 30px;
 	height: 0;
 }
+a
+{
+	color: #00b2dc;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #0784a1;
+}
+a:visited
+{
+	text-decoration: underline;
+}
+
+ul.list
+{
+	margin-left: 20px;
+}
+ul.list li
+{
+	margin-bottom: 10px;
+}
 
 .clear
 {
