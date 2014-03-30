@@ -3,12 +3,17 @@ layout: post
 ---
 <div class="wide column">
 	{% for post in site.posts %}
+		{% if post.tags contains 'portfolio' %}
+
+		{% else %}
 		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 			<h2 itemprop="name headline">{{ post.title }}</h2>
 			<div itemprop="articleBody">
 				{{post.content}}
 			</div>
 		</article>
+		<hr>
+		{% endif %}
 	{% endfor %}
 </div>
 <div class="narrow column">

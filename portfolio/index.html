@@ -1,10 +1,25 @@
 ---
-layout: default
+layout: portfolio
 ---
 <div class="wide column">
-	<h1>Portfolio</h1>
-
+	{% for post in site.posts %}
+		{% if post.tags contains 'portfolio' %}
+		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+			<h2 itemprop="name headline">{{ post.title }}</h2>
+			<div itemprop="articleBody">
+				{{post.content}}
+			</div>
+		</article>
+		<hr>
+		{% endif %}
+	{% endfor %}
 </div>
-<div class="narrow column_with_img">
-
+<div class="narrow column">
+	<ul class='list'>
+		{% for post in site.posts %}
+			<li>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
 </div>
