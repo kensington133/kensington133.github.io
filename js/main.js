@@ -5,7 +5,7 @@ $(document).ready( function(){
 
 $(window).resize(function(){
 	handleContentHeight();
-
+	typeAhead();
 });
 
 function handleContentHeight(){
@@ -37,5 +37,17 @@ function mobileMenu()
 		$('.menu').slideToggle( function(){
 		 $(".arrow").html($('.menu').is(':visible') ? '&#x25B2;' : '&#x25BC;');
 		});
+	});
+}
+
+function typeAhead()
+{
+	var search = $('#search').typeahead({
+		prefetch: '/search.json',
+		engine: Hogan
+	});
+
+	search.on('typeahead:selected', function (evt, data){
+		window.location = data.url;
 	});
 }

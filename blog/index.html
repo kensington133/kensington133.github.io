@@ -2,7 +2,7 @@
 layout: post
 ---
 <div class="wide column">
-<p>next page - {{paginator.next_page_path}}</p>
+
 	{% for post in paginator.posts %}
 		{% if post.tags contains 'portfolio' %}
 
@@ -11,14 +11,16 @@ layout: post
 			<h2 itemprop="name headline">{{ post.title }}</h2>
 			<div itemprop="articleBody">
 				{{post.content}}
-
 			</div>
+			<p>Posted on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_long_string }}</time></p>
 		</article>
 		<hr>
 		{% endif %}
 	{% endfor %}
+
 </div>
 <div class="narrow column">
+
 	<h3>Recent Posts</h3>
 	<ul class='list'>
 		{% for post in paginator.posts %}
@@ -27,4 +29,7 @@ layout: post
 			</li>
 		{% endfor %}
 	</ul>
+	<input type="text" id='search' placeholder='search posts' />
+	<a href="/posts/">View all Posts</a>
+
 </div>
