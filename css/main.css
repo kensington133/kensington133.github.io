@@ -158,7 +158,10 @@ ul.list.no_bullets
 {
 	list-style: none;
 }
-
+i
+{
+	margin-right: 5px;
+}
 .clear
 {
 	clear: both;
@@ -257,6 +260,7 @@ ul.list.no_bullets
 .menu_item:hover
 {
 	text-decoration: underline;
+	color: #fff!important;
 }
 .menu_item.selected
 {
@@ -403,6 +407,10 @@ ul.list.no_bullets
 	.menu
 	{
 		width: 125px;
+	}
+	.menu i
+	{
+		display: none;
 	}
 	.content,
 	.footer,
