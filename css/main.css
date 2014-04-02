@@ -15,7 +15,6 @@ body
 	background: #df5a49;
 	font: 16px/24px 'Lato', sans-serif;
 	z-index: 10;
-	max-height:
 }
 h1, h2, h3, h4, h5, h6
 {
@@ -370,6 +369,21 @@ ul.list.no_bullets
 	-moz-box-shadow:    3px 0px 15px 0px rgba(34, 34, 34, 0.4);
 	box-shadow:         3px 0px 15px 0px rgba(34, 34, 34, 0.4);
 }
+.button
+{
+	color: #fff;
+	background: #45b29d;
+	padding: 5px 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius:    4px;
+	border-radius:         4px;
+	-webkit-transition: background 0.2s ease-in;
+	-moz-transition: background 0.2s ease-in;
+	-o-transition: background 0.2s ease-in;
+	transition: background 0.2s ease-in;
+	text-align: center;
+	margin-bottom: 10px;
+}
 .pagination
 {
 	max-width: 610px;
@@ -452,8 +466,7 @@ ul.list.no_bullets
 
 .tag_item
 {
-	background: #334d5c;
-	color: #fff;
+	border: 3px solid #334d5c;
 	-webkit-border-radius: 4px;
 	-moz-border-radius:    4px;
 	border-radius:         4px;
