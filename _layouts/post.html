@@ -1,26 +1,14 @@
 {% include header.html %}
 
-	<h1>Blog</h1>
+<div class="wide column">
+	<h1 itemprop="name headline">{{page.title}}</h1>
 
         {{ content }}
 
-	<div class="clear"></div>
-	{% if paginator.total_pages > 0 %}
-	<div class="pagination">
-		{% if paginator.previous_page %}
-			{% if paginator.previous_page == 1 %}
-				<a href="/blog/" class="previous">&laquo; Previous</a>
-			{% else %}
-				<a href="{{ paginator.previous_page_path }}" class="previous left">&laquo; Previous</a>
-			{% endif %}
-		{% endif %}
+        <p>Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+</div>
 
-		{% if paginator.next_page %}
-			<a href="{{ paginator.next_page_path }}" class="next right">Next &raquo;</a>
-		{% endif %}
-		<div class="clear"></div>
-		<div class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</div>
-	</div>
-	{% endif %}
-
+<div class="narrow column">
+	{% include sidebar.html %}
+</div>
 {% include footer.html %}

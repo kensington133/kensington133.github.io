@@ -132,6 +132,7 @@ hr
 	margin: 10px 0 30px;
 	height: 0;
 }
+
 a
 {
 	color: #00b2dc;
@@ -157,10 +158,7 @@ ul.list li
 ul.list.no_bullets
 {
 	list-style: none;
-}
-i
-{
-	margin-right: 5px;
+	margin-left: 0px;
 }
 .clear
 {
@@ -248,10 +246,6 @@ i
 {
 	color: #00abf0;
 }
-/*.social img
-{
-	vertical-align: middle;
-}*/
 
 /********* MENU ****************/
 .menu
@@ -294,6 +288,10 @@ i
 {
 	margin-left: 35px;
 }
+.menu_text i
+{
+	margin-right: 5px;
+}
 /******** CONTENT *********/
 .content
 {
@@ -317,15 +315,14 @@ i
 	height: 100%;
 	text-align: center;
 }
-
 .wide
 {
-	width: 65%;
+	width: 70%;
 	margin-right: 5%;
 }
 .narrow
 {
-	width: 30%;
+	width: 25%;
 }
 .super_wide
 {
@@ -365,19 +362,73 @@ i
 }
 .pagination
 {
-	max-width: 685px;
+	max-width: 610px;
 	width: 100%;
 }
 .page_number
 {
 	text-align: center;
 }
-
-#search
+.twitter-typeahead
 {
 	width: 100%;
-	padding: 6px;
+}
+#search
+{
+	display: block;
 	outline: none;
+	width: 100%;
+	background-color: transparent;
+	background-image: none;
+	border: 3px solid #bdc3c7;
+	font-size: 15px;
+	line-height: 1.467;
+	padding: 8px 12px;
+	height: 42px;
+	-webkit-appearance: none;
+	border-radius: 6px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: border .25s linear, linear;
+	transition: border .25s linear, linear;
+}
+#search:focus
+{
+	border: 3px solid #45b29d;
+}
+.sidebar_link
+{
+	color: #fff;
+}
+.sidebar_link:hover
+{
+	color: #fff;
+}
+.sidebar_item
+{
+	background: rgba(51,77,92, 0.8);
+	padding: 10px 15px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius:    4px;
+	border-radius:         4px;
+	-webkit-transition: background 0.2s ease-in;
+	-moz-transition: background 0.2s ease-in;
+	-o-transition: background 0.2s ease-in;
+	transition: background 0.2s ease-in;
+	text-align: center;
+}
+.sidebar_item:hover
+{
+	cursor: pointer;
+	background: rgba(51,77,92, 1);
+}
+.sidebar_item a
+{
+	color: #fff;
+}
+.post_search
+{
+	margin-bottom: 15px;
 }
 .post_item
 {
@@ -500,6 +551,10 @@ i
 		float: none;
 		width: 100%;
 	}
+	.pagination
+	{
+		margin-bottom: 30px;
+	}
 }
 
 /* mobile size*/
@@ -574,6 +629,12 @@ i
 	.header
 	{
 		margin-top: 39px;
+	}
+	.pagination
+	{
+		max-width: 738px;
+		width: 100%;
+		margin-bottom: 30px;
 	}
 
 }

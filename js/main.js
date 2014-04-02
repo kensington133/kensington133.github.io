@@ -1,11 +1,11 @@
 $(document).ready( function(){
 	handleContentHeight();
 	mobileMenu();
+	typeAhead();
 });
 
 $(window).resize(function(){
 	handleContentHeight();
-	typeAhead();
 });
 
 function handleContentHeight(){
@@ -43,11 +43,11 @@ function mobileMenu()
 function typeAhead()
 {
 	var search = $('#search').typeahead({
-		prefetch: '/search.json',
-		engine: Hogan
-	});
+	        prefetch: '/search.json',
+	        engine: Hogan
+    	});
 
-	search.on('typeahead:selected', function (evt, data){
+	search.on('typeahead:selected', function (evt, data) {
 		window.location = data.url;
 	});
 }

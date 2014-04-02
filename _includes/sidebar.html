@@ -1,0 +1,18 @@
+
+<h3>Recent Posts</h3>
+
+<div class="post_search">
+	<!-- <i class="fa fa-search fa- left"></i> -->
+	<input type="text" id='search' placeholder='search posts' />
+</div>
+<div class="clear"></div>
+<ul class='list no_bullets'>
+	{% for post in site.posts limit:6 %}
+		<a class='sidebar_link' href="{{ post.url }}">
+			<li class='sidebar_item'>{{ post.title }}</li>
+		</a>
+	{% endfor %}
+	<a class='sidebar_link' href="/posts/">
+			<li class='sidebar_item'>View all Posts &raquo;</li>
+		</a>
+</ul>
