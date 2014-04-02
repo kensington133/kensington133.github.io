@@ -225,16 +225,26 @@ ul.list.no_bullets
 .social_icon
 {
 	color: #fff;
-	-webkit-transition: color 0.2s ease-in;
+	/*-webkit-transition: color 0.2s ease-in;
 	-moz-transition: color 0.2s ease-in;
 	-o-transition: color 0.2s ease-in;
-	transition: color 0.2s ease-in;
+	transition: color 0.2s ease-in;*/
+
+	-webkit-transition: font-size 0.2s ease-in;
+	-moz-transition: font-size 0.2s ease-in;
+	-o-transition: font-size 0.2s ease-in;
+	transition: font-size 0.2s ease-in;
 }
 .social_icon:last-child
 {
 	margin-right: 0px;
 }
-.social_icon.linkedin:hover
+.social_icon:hover
+{
+	font-size: 110%;
+	color: #fff;
+}
+/*.social_icon.linkedin:hover
 {
 	color: #007bb6;
 }
@@ -245,7 +255,7 @@ ul.list.no_bullets
 .social_icon.twitter:hover
 {
 	color: #00abf0;
-}
+}*/
 
 /********* MENU ****************/
 .menu
@@ -432,10 +442,23 @@ ul.list.no_bullets
 }
 .post_item
 {
-	border-bottom: 1px solid #e3e3e3;
+	border: 3px solid #45b29d;
+	-webkit-border-radius: 4px;
+	-moz-border-radius:    4px;
+	border-radius:         4px;
 	margin-bottom: 20px;
-	border-right: 1px solid #e3e3e3;
 	padding: 5px;
+}
+
+.tag_item
+{
+	background: #334d5c;
+	color: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius:    4px;
+	border-radius:         4px;
+	padding: 5px 10px;
+
 }
 .yellow
 {
