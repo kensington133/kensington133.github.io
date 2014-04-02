@@ -15,11 +15,16 @@ layout: portfolio
 	{% endfor %}
 </div>
 <div class="narrow column">
+	<h3>Previous Items</h3>
 	<ul class='list'>
-		{% for post in site.posts %}
-			<li>
-				<a href="{{ post.url }}">{{ post.title }}</a>
-			</li>
+
+		{% for post in site.posts limit: 10%}
+			{% if post.tags contains 'portfolio' %}
+				<li>
+					<a href="{{ post.url }}">{{ post.title }}</a>
+				</li>
+			{% endif %}
 		{% endfor %}
+
 	</ul>
 </div>

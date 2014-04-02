@@ -221,13 +221,37 @@ i
 }
 .social
 {
-	line-height: 110px;
-	margin-right: 30px;
+	line-height: 135px;
+	margin-right: 20px;
 }
-.social img
+.social_icon
+{
+	color: #fff;
+	-webkit-transition: color 0.2s ease-in;
+	-moz-transition: color 0.2s ease-in;
+	-o-transition: color 0.2s ease-in;
+	transition: color 0.2s ease-in;
+}
+.social_icon:last-child
+{
+	margin-right: 0px;
+}
+.social_icon.linkedin:hover
+{
+	color: #007bb6;
+}
+.social_icon.github:hover
+{
+	color: #333;
+}
+.social_icon.twitter:hover
+{
+	color: #00abf0;
+}
+/*.social img
 {
 	vertical-align: middle;
-}
+}*/
 
 /********* MENU ****************/
 .menu
