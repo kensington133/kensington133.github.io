@@ -2,6 +2,7 @@ $(document).ready( function(){
 	handleContentHeight();
 	mobileMenu();
 	typeAhead();
+	// sendEmail();
 });
 
 $(window).resize(function(){
@@ -50,4 +51,22 @@ function typeAhead()
 	search.on('typeahead:selected', function (evt, data) {
 		window.location = data.url;
 	});
+}
+function sendEmail()
+{
+	form = $("#contact_form");
+	$(form).submit(function(e) {
+	e.preventDefault();
+	alert('hello?');
+	url = 'http://php.heybenshort.co.uk/send.php'
+	$.ajax({
+		type: 'POST',
+		url: url,
+		data: $(form).serialize(),
+		success: function(data)
+		{
+			alert(data);
+		}
+	 });
+});
 }
