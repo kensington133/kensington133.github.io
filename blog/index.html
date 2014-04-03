@@ -12,7 +12,7 @@ layout: blog
 			<div itemprop="articleBody">
 				{{post.content}}
 			</div>
-			<p>Posted on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_long_string }}</time></p>
+			<p class='blog_date'>Posted on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_long_string }}</time></p>
 		</article>
 		<hr>
 		{% endif %}

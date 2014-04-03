@@ -3,6 +3,7 @@ $(document).ready( function(){
 	mobileMenu();
 	typeAhead();
 	sendEmail();
+	handleActive();
 });
 
 $(window).resize(function(){
@@ -90,4 +91,21 @@ function sendEmail()
 		});
 
 	});
+}
+
+function handleActive()
+{
+	var currentPage = window.location.pathname
+	console.log(currentPage);
+	var menu = $('.menu_item');
+
+	$(menu).each( function(){
+		console.log($(this).attr('href'));
+		$(this).removeClass('selected');
+		if($(this).attr('href') == currentPage)
+		{
+			$(this).addClass('selected');
+		}
+	});
+
 }

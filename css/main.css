@@ -393,6 +393,11 @@ ul.list.no_bullets
 {
 	text-align: center;
 }
+.blog_date
+{
+	font-style: italic;
+	font-size: 90%;
+}
 .twitter-typeahead
 {
 	width: 100%;
@@ -429,7 +434,6 @@ ul.list.no_bullets
 }
 .tt-query
 {
-	font-family: sans-serif;
 	width: 110px;
 	border: 0;
 	margin: 0;
