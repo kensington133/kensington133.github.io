@@ -44,9 +44,13 @@ function mobileMenu()
 function typeAhead()
 {
 	var search = $('#search').typeahead({
+	        name: 'searchData',
 	        prefetch: '/search.json',
 	        engine: Hogan
-    	});
+    	}).bind('typeahead:opened', function (obj, datum) {
+                console.log(obj);
+                console.log(datum);
+                });
 
 	search.on('typeahead:selected', function (evt, data) {
 		window.location = data.url;
@@ -61,24 +65,24 @@ function sendEmail()
 		$(form).fadeOut( function(){
 			$('.loading').fadeIn();
 			$.ajax({
-			type: 'POST',
-			url: url,
-			data: $(form).serialize(),
-			success: function(data)
-			{
-				// alert(data);
-				$('.loading').fadeOut( function(){
-					$('.success').fadeIn();
-				});
+				type: 'POST',
+				url: url,
+				data: $(form).serialize(),
+				success: function(data)
+				{
+					// alert(data);
+					$('.loading').fadeOut( function(){
+						$('.success').fadeIn();
+					});
 
-			},
-			fail: function()
-			{
-				$('.loading').fadeOut( function(){
-					$('.fail').fadeIn();
-				});
-			}
-		});
+				},
+				fail: function()
+				{
+					$('.loading').fadeOut( function(){
+						$('.fail').fadeIn();
+					});
+				}
+			});
 		});
 
 	});
