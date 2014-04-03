@@ -500,6 +500,8 @@ ul.list.no_bullets
 .text_input.long
 {
 	height: 200px;
+	max-width: 616px;
+	width: 100%;
 }
 .submit
 {
@@ -509,13 +511,35 @@ ul.list.no_bullets
 	font-size: 16px;
 	outline: none;
 }
+.submit:hover
+{
+	cursor: pointer;
+}
 .honey_pot
 {
 	display: none;
 }
-.info_panel
+.hide
 {
-
+	display: none;
+}
+.form_control
+{
+	text-align: center;
+	/*display: block;*/
+}
+.form_control p
+{
+	margin-bottom: 0px;
+	font-size: 20px;
+}
+.success
+{
+	color: #2ecc71;
+}
+.fail
+{
+	color: #e74c3c;
 }
 .yellow
 {
@@ -716,5 +740,9 @@ ul.list.no_bullets
 		width: 100%;
 		margin-bottom: 30px;
 	}
-
+	.text_input.long
+	{
+		height: 200px;
+		max-width: 742px;
+	}
 }

@@ -25,13 +25,19 @@ layout: default
 		<input type="submit" class='button submit' value='Send' />
 	</form>
 
-	<div class="info_panel">
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
+	<div class="loading hide form_control">
+		<p>Loading...</p>
+		<i class="fa fa-cog fa-5x fa-spin"></i>
 	</div>
+	<div class="success hide form_control">
+		<p>Email sent successfully</p>
+		<i class="fa fa-check fa-5x"></i>
+	</div>
+	<div class="fail hide form_control">
+		<p>Something went wrong, please try again.</p>
+		<i class="fa fa-meh-o fa-5x"></i>
+	</div>
+
 </div>
 <div class="narrow column">
 

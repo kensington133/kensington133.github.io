@@ -58,49 +58,28 @@ function sendEmail()
 	$(form).submit(function( evt ) {
 		evt.preventDefault();
 		var url = 'http://php.heybenshort.co.uk/send.php'
-
-		$.ajax({
+		$(form).fadeOut( function(){
+			$('.loading').fadeIn();
+			$.ajax({
 			type: 'POST',
 			url: url,
 			data: $(form).serialize(),
 			success: function(data)
 			{
-				alert(data);
+				// alert(data);
+				$('.loading').fadeOut( function(){
+					$('.success').fadeIn();
+				});
+
+			},
+			fail: function()
+			{
+				$('.loading').fadeOut( function(){
+					$('.fail').fadeIn();
+				});
 			}
 		});
+		});
+
 	});
 }
-
-// function checkEmpty()
-// {
-// 	var form = $('#contact_form');
-// 	errMsg = '';
-// 	errCount = 0;
-// 	if($('.contact_name').length === 0)
-// 	{
-// 		errCount++;
-// 		errMsg += "Please provide a contact name\n";
-// 	}
-
-// 	if($('.contact_email').length === 0)
-// 	{
-// 		errCount++;
-// 		errMsg += "Please provide an email address\n";
-// 	}
-
-// 	if($('.contact_message').length === 0)
-// 	{
-// 		errCount++;
-// 		errMsg += "Check what you entered for your message\n";
-// 	}
-
-// 	if(errCount > 0)
-// 	{
-// 		return false;
-// 		alert(errMsg);
-// 	}
-// 	else
-// 	{
-// 		return true;
-// 	}
-// }
