@@ -413,12 +413,94 @@ ul.list.no_bullets
 	border-radius: 6px;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	-webkit-transition: border .25s linear, linear;
-	transition: border .25s linear, linear;
+	-webkit-transition: border .25s, border-radius .25s, linear, linear;
+	transition: border .25s border-radius .25s, linear, linear;
 }
 #search:focus
 {
 	border: 3px solid #45b29d;
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+
+}
+.tt-query
+{
+	font-family: sans-serif;
+	width: 110px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 1px solid #eaeaea;
+	margin-top: 1px;
+	background-color: #fff;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.tt-query:focus
+{
+	width: 110px;
+	background-color: #fff;
+	border: 1px solid #eaeaea;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.tt-hint
+{
+	display: none;
+}
+.tt-dropdown-menu
+{
+	width: 100%;
+	font-size: 14px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-moz-border-radius-bottomright: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border: 3px solid #45b29d;
+	max-height: 290px;
+	overflow-y: auto;
+}
+.tt-suggestion
+{
+	padding: 5px;
+}
+.tt-suggestion p
+{
+	margin: 0;
+}
+.tt-suggestion.tt-is-under-cursor
+{
+	color: #fff;
+	background-color: #45b29d;
+}
+.post-date
+{
+	color: #aaa;
+	font-size: 12px;
+}
+.tt-is-under-cursor .post-date
+{
+	color: #fff;
+	font-size: 12px;
 }
 .sidebar_link
 {

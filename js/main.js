@@ -45,17 +45,21 @@ function typeAhead()
 {
 	var search = $('#search').typeahead({
 	        name: 'searchData',
-	        prefetch: {url: '../search.json'},
+	        template: [
+			'<p class="post-name">{{value}}</p>',
+			'<p class="post-date">{{date}}</p>'
+		].join(''),
+	        prefetch: {
+	        		url: '../search.json'
+	        },
 	        engine: Hogan
-    	}).bind('typeahead:opened', function (obj, datum) {
-                console.log(obj);
-                console.log(datum);
-                });
+    	})
 
 	search.on('typeahead:selected', function (evt, data) {
 		window.location = data.url;
 	});
 }
+
 function sendEmail()
 {
 	var form = $("#contact_form");
