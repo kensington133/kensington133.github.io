@@ -473,6 +473,50 @@ ul.list.no_bullets
 	padding: 5px 10px;
 
 }
+.text_input
+{
+	display: block;
+	outline: none;
+	width: 100%;
+	margin-bottom: 20px;
+	background-color: transparent;
+	background-image: none;
+	border: 3px solid #bdc3c7;
+	font-size: 15px;
+	line-height: 1.467;
+	padding: 8px 12px;
+	height: 42px;
+	-webkit-appearance: none;
+	border-radius: 6px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: border .25s linear, linear;
+	transition: border .25s linear, linear;
+}
+.text_input:focus
+{
+	border: 3px solid #45b29d;
+}
+.text_input.long
+{
+	height: 200px;
+}
+.submit
+{
+	border: none;
+	padding: 10px;
+	width: 100%;
+	font-size: 16px;
+	outline: none;
+}
+.honey_pot
+{
+	display: none;
+}
+.info_panel
+{
+
+}
 .yellow
 {
 	background: #efc94c;

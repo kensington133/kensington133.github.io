@@ -2,7 +2,7 @@ $(document).ready( function(){
 	handleContentHeight();
 	mobileMenu();
 	typeAhead();
-	// sendEmail();
+	sendEmail();
 });
 
 $(window).resize(function(){
@@ -54,19 +54,53 @@ function typeAhead()
 }
 function sendEmail()
 {
-	form = $("#contact_form");
-	$(form).submit(function(e) {
-	e.preventDefault();
-	alert('hello?');
-	url = 'http://php.heybenshort.co.uk/send.php'
-	$.ajax({
-		type: 'POST',
-		url: url,
-		data: $(form).serialize(),
-		success: function(data)
-		{
-			alert(data);
-		}
-	 });
-});
+	var form = $("#contact_form");
+	$(form).submit(function( evt ) {
+		evt.preventDefault();
+		var url = 'http://php.heybenshort.co.uk/send.php'
+
+		$.ajax({
+			type: 'POST',
+			url: url,
+			data: $(form).serialize(),
+			success: function(data)
+			{
+				alert(data);
+			}
+		});
+	});
 }
+
+// function checkEmpty()
+// {
+// 	var form = $('#contact_form');
+// 	errMsg = '';
+// 	errCount = 0;
+// 	if($('.contact_name').length === 0)
+// 	{
+// 		errCount++;
+// 		errMsg += "Please provide a contact name\n";
+// 	}
+
+// 	if($('.contact_email').length === 0)
+// 	{
+// 		errCount++;
+// 		errMsg += "Please provide an email address\n";
+// 	}
+
+// 	if($('.contact_message').length === 0)
+// 	{
+// 		errCount++;
+// 		errMsg += "Check what you entered for your message\n";
+// 	}
+
+// 	if(errCount > 0)
+// 	{
+// 		return false;
+// 		alert(errMsg);
+// 	}
+// 	else
+// 	{
+// 		return true;
+// 	}
+// }

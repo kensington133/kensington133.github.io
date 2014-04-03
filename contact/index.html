@@ -7,10 +7,31 @@ layout: default
 
 	<form id='contact_form' action='http://php.heybenshort.co.uk/send.php' method='POST'>
 		<input type="hidden" name='token' value='b826c04326b59e33e4442b7919e307a5' />
-		<input type="text" name='contact_name' placeholder="who's getting in touch?"/>
-		<textarea name="contact_message" placeholder="what would you like to say?"></textarea>
-		<input type="submit" value='Send' />
+
+		<label for="contact_name">Name:</label>
+		<input type="text" name='contact_name' class='text_input' placeholder="who's getting in touch?" required/>
+
+		<label for="contact_email">Email:</label>
+		<input type="email" name='contact_email' class='text_input' placeholder="who should I get back to?" required>
+
+		<label for="contact_name">Message:</label>
+		<textarea name="contact_message" class='text_input long' placeholder="what would you like to say?" required></textarea>
+
+		<div class="honey_pot">
+			<label for="spam_hunter">Are you a bot?</label>
+			<input type="text" class='text_input' name="spam_hunter" placeholder="leave this blank" />
+		</div>
+
+		<input type="submit" class='button submit' value='Send' />
 	</form>
+
+	<div class="info_panel">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</div>
 </div>
 <div class="narrow column">
 
