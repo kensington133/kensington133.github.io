@@ -45,7 +45,7 @@ function typeAhead()
 {
 	var search = $('#search').typeahead({
 	        name: 'searchData',
-	        prefetch: '/search.json',
+	        prefetch: {url: '../search.json'},
 	        engine: Hogan
     	}).bind('typeahead:opened', function (obj, datum) {
                 console.log(obj);
