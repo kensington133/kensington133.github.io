@@ -1,0 +1,62 @@
+- id: shoreline
+  description: Shoreline Extreme Sports
+  imagefolder: /assets/shoreline/
+  images:
+  - filename: shorelineactivitieshomepage.png
+    text: 'Shoreline is an extreme sports provider in Bude, Cornwall'
+  - filename: shorelineactivitiespayment.png
+    text: 'Payments page linked to PayPal so that customers can pay for activities'
+  - filename: shorelineaeventspayment.png
+    text: 'Payments page linked to PayPal to pay for events like the triathlon'
+  - filename: 'shorelineaeventspage.png'
+    text: 'Page showing the a list of all the events that shoreline offers'
+  - filename: 'shorelinehomepage.png'
+    text: 'Shoreline is an extreme sports provider in Bude, Cornwall'
+- id: ajpaving
+  description: AJ Paving Bude
+  imagefolder: /assets/ajpaving/
+  images:
+  - filename: ajpaving.jpg
+    text: 'AJ Paving in Bude, Cornwall'
+  - filename: contact-form.png
+    text: 'PHP contact form to allow potential clients to get in touch with AJ Paving'
+  - filename: gallery.png
+    text: 'Gallery showcasing AJ Paving’s latest work'
+  - filename: testimonialslider.png
+    text: 'Cycles through AJ Paving client testimonials'
+- id: budezest
+  description: BudeZest Construction
+  imagefolder: /assets/budezest/
+  images:
+  - filename: budezest-carpentry.png
+    text: 'Carpentry page showing of a variety of different carpentry methods'
+  - filename: budezest-construction.png
+    text: 'Construction page showing different types of construction methods available'
+  - filename: budezest-contact.png
+    text: 'PHP contact form on BudeZest'
+  - filename: budezest-home.png
+    text: 'BudeZest carpentry and construction home page'
+- id: trurocollege
+  description: Truro College - Extenuating Circumstance Hub
+  imagefolder: /assets/trurocollege/
+iamges:
+  - filename: admin-claim-view.png
+    text: 'View of a single claim that the admin can approve or deny a claim'
+  - filename: admin-hub.png
+    text: 'First page that the admin sees when logged in'
+  - filename: all-claims-view.png
+    text: 'A list of all the claims a student has submitted'
+  - filename: initial-claim-submit.png
+    text: 'The student chooses how many assignments he/she is claiming on before proceeding'
+  - filename: main-claim-submit.png
+    text: 'This is the form that the student will fill out to submit a claim'
+  - filename: loginout.png
+    text: 'Index page of the Extenuating Circumstance Hub
+  - filename: registrationpage.png
+    text: 'Form to register for the Extenuating Circumstance Hub'
+-filename: single-claim-view.png
+    text: 'Upon clicking on a claim this it what the student will see'
+  - filename: stats-bar-graph.png
+    text: 'Bar graph claim statistics retrieved from the server'
+  - filename: stats-pie-chart.png
+    text: 'Pie chart claim statistics retrieved from the server'

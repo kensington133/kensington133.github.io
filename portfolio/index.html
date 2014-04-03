@@ -1,4 +1,4 @@
----
+--
 layout: portfolio
 ---
 <div class="wide column">
@@ -6,6 +6,18 @@ layout: portfolio
 		{% if post.tags contains 'portfolio' %}
 		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 			<h2 itemprop="name headline">{{ post.title }}</h2>
+			{% if page.galleryid %}
+				{% if gallery.id == page.galleryid %}
+					<ul>
+						{% for image in gallery.images %}
+							<li>
+							<img src="{{ gallery.imagefolder }}/{{ image.filename }}">
+							<p>{{ image.text }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			{% endif %}
 			<div itemprop="articleBody">
 				{{post.content}}
 			</div>
