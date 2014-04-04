@@ -4,6 +4,7 @@ $(document).ready( function(){
 	typeAhead();
 	sendEmail();
 	handleActive();
+	handleGalleryLoading()
 	handleGallery();
 });
 
@@ -62,6 +63,7 @@ function handleContentHeight(){
 
 	//sets the overlapping backgrounds the the window height
 	$('.overlap').height(documentHeight);
+	$('.gallery_overlay').height(documentHeight);
 
 	//if the content is less then the window set it to the window height
 	if(contentHeight < viewableHeight)
@@ -149,27 +151,65 @@ function handleActive()
 
 }
 
-function handleGallery()
+function handleGalleryLoading()
 {
 	var images = [];
 	$(".gallery_thumb").each( function(){
 		var src = $(this).find("img").attr("src")
-		// console.log(src);
 		images.push(src);
 	});
-	// console.log(images);
 
 	$.imageloader({
 		urls: images,
 		onComplete: function(images)
 		{
-			$('.gallery').fadeIn();
-		},
-		onUpdate: function(ratio, image)
-		{
-		},
-		onError: function(err)
-		{
+			$('.loading').fadeOut( function() {
+				$('.gallery').fadeIn();
+				handleContentHeight();
+			});
+
 		}
 	});
 }
+
+function handleGallery()
+{
+	$('.gallery_thumb').click( function() {
+
+		var highresURL = $(this).data('highres');
+		var caption = $(this).data('caption');
+
+		showGallery(highresURL, caption);
+	});
+
+	$('.close').click( function() {
+		closeGallery();
+	});
+
+	$(document).keyup( function(evt){
+		if(evt.keyCode == 27)
+		{
+			closeGallery();
+		}
+	})
+}
+
+function showGallery(highresURL, caption)
+{
+	//bodge until I can get the text/image to show in window I clicked
+	//probably due to height being doc height now window height ;)
+	$('body').scrollTop(0);
+	$('.gallery_overlay').fadeIn( function() {
+		$('.full_image').attr('src', highresURL);
+		$('.image_caption').text(caption);
+		$('body').css({overflow: 'hidden'});
+	});
+}
+
+function closeGallery()
+{
+	$('.gallery_overlay').fadeOut();
+	$('body').css({overflow: 'auto'});
+	$('.full_image').attr('src', '');
+}
+
