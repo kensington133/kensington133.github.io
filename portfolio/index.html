@@ -4,25 +4,16 @@ layout: portfolio
 <div class="wide column">
 	{% for post in site.posts %}
 		{% if post.tags contains 'portfolio' %}
-		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-			<h2 itemprop="name headline">{{ post.title }}</h2>
-			{% if page.galleryid %}
-				{% if gallery.id == page.galleryid %}
-					<ul class='list no_bullets'>
-						{% for image in gallery.images %}
-							<li>
-							<img src="{{ gallery.imagefolder }}/{{ image.filename }}">
-							<p>{{ image.text }}</p>
-							</li>
-						{% endfor %}
-					</ul>
-				{% endif %}
+			{% if post.content contains '<!--cut-->' %}
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+				<h2 itemprop="name headline">{{ post.title }}</h2>
+				<div itemprop="articleBody">
+					{{post.content | split:'<!--cut-->' | first}}
+				</div>
+				<a class='button' href="{{post.url}}">View Post &raquo;</a>
+			</article>
+			<hr>
 			{% endif %}
-			<div itemprop="articleBody">
-				{{post.content}}
-			</div>
-		</article>
-		<hr>
 		{% endif %}
 	{% endfor %}
 	{% include pagination.html %}

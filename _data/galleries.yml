@@ -1,6 +1,7 @@
 - id: shoreline
   description: Shoreline Extreme Sports
   imagefolder: /assets/shoreline/
+  thumbfolder: /assests/shoreline/thumbs/
   images:
   - filename: shorelineactivitieshomepage.png
     text: 'Shoreline is an extreme sports provider in Bude, Cornwall'
@@ -15,6 +16,7 @@
 - id: ajpaving
   description: AJ Paving Bude
   imagefolder: /assets/ajpaving/
+  thumbfolder: /assests/shoreline/ajpaving/
   images:
   - filename: ajpaving.jpg
     text: 'AJ Paving in Bude, Cornwall'
@@ -27,6 +29,7 @@
 - id: budezest
   description: BudeZest Construction
   imagefolder: /assets/budezest/
+  thumbfolder: /assests/budezest/thumbs/
   images:
   - filename: budezest-carpentry.png
     text: 'Carpentry page showing of a variety of different carpentry methods'
@@ -39,6 +42,7 @@
 - id: trurocollege
   description: Truro College - Extenuating Circumstance Hub
   imagefolder: /assets/trurocollege/
+  thumbfolder: /assets/trurocollege/thumbs/
   images:
     - filename: admin-claim-view.png
       text: 'View of a single claim that the admin can approve or deny a claim'
@@ -46,8 +50,6 @@
       text: First page that the admin sees when logged in
     - filename: all-claims-view.png
       text: A list of all the claims a student has submitted
-    - filename: initial-claim-submit.png
-      text: The student chooses how many assignments he/she is claiming on before proceeding
     - filename: main-claim-submit.png
       text: This is the form that the student will fill out to submit a claim
     - filename: loginout.png

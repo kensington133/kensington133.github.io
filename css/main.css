@@ -371,6 +371,7 @@ ul.list.no_bullets
 }
 .button
 {
+	display: inline-block;
 	color: #fff;
 	background: #45b29d;
 	padding: 5px 10px;
@@ -627,6 +628,39 @@ ul.list.no_bullets
 {
 	color: #e74c3c;
 }
+/******** GALLERY ********/
+.gallery
+{
+	overflow: hidden;
+	margin-bottom: 30px;
+	display: none;
+}
+.gallery_thumb
+{
+	float: left;
+	overflow: hidden;
+	padding: 5px;
+	margin: 5px;
+	background: #bdc3c7;
+	-webkit-border-radius: 6px;
+	-moz-border-radius:    6px;
+	border-radius:         6px;
+	-webkit-transition: background .25s linear, linear;
+	transition: background .25s linear, linear;
+}
+.gallery_thumb:hover
+{
+	background: #45b29d;
+	cursor: pointer;
+}
+
+.gallery_image
+{
+	-webkit-border-radius: 6px;
+	-moz-border-radius:    6px;
+	border-radius:         6px;
+}
+
 .yellow
 {
 	background: #efc94c;

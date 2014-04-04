@@ -1,0 +1,28 @@
+{% include header.html %}
+	<a href="/portfolio/" class="button">&laquo; Back</a>
+	<h1 itemprop="name headline">{{page.title}}</h1>
+
+	{{ content }}
+
+	{% for gallery in site.data.galleries %}
+	{% if page.galleryid %}
+		{% if gallery.id == page.galleryid %}
+		<div class="gallery">
+			<ul class='list no_bullets'>
+				{% for image in gallery.images %}
+					<li>
+						<div class="gallery_thumb" data-caption='{{ image.text }}' data-highres='{{ gallery.imagefolder }}{{ image.filename }}'>
+							<img class='gallery_image' src="{{ gallery.thumbfolder }}{{ image.filename }}">
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="clear"></div>
+		{% endif %}
+	{% endif %}
+	{% endfor %}
+
+	<p>Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+
+{% include footer.html %}
