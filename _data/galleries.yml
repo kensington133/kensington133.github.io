@@ -41,7 +41,7 @@
   imagefolder: /assets/trurocollege/
   images:
     - filename: admin-claim-view.png
-      text: 'View of a single claim that the admin can approve or deny a claim
+      text: 'View of a single claim that the admin can approve or deny a claim'
     - filename: admin-hub.png
       text: First page that the admin sees when logged in
     - filename: all-claims-view.png
