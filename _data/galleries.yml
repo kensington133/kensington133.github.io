@@ -39,24 +39,24 @@
 - id: trurocollege
   description: Truro College - Extenuating Circumstance Hub
   imagefolder: /assets/trurocollege/
-iamges:
-  - filename: admin-claim-view.png
-    text: 'View of a single claim that the admin can approve or deny a claim'
-  - filename: admin-hub.png
-    text: 'First page that the admin sees when logged in'
-  - filename: all-claims-view.png
-    text: 'A list of all the claims a student has submitted'
-  - filename: initial-claim-submit.png
-    text: 'The student chooses how many assignments he/she is claiming on before proceeding'
-  - filename: main-claim-submit.png
-    text: 'This is the form that the student will fill out to submit a claim'
-  - filename: loginout.png
-    text: 'Index page of the Extenuating Circumstance Hub
-  - filename: registrationpage.png
-    text: 'Form to register for the Extenuating Circumstance Hub'
--filename: single-claim-view.png
-    text: 'Upon clicking on a claim this it what the student will see'
-  - filename: stats-bar-graph.png
-    text: 'Bar graph claim statistics retrieved from the server'
-  - filename: stats-pie-chart.png
-    text: 'Pie chart claim statistics retrieved from the server'
+  images:
+    - filename: admin-claim-view.png
+      text: 'View of a single claim that the admin can approve or deny a claim
+    - filename: admin-hub.png
+      text: First page that the admin sees when logged in
+    - filename: all-claims-view.png
+      text: A list of all the claims a student has submitted
+    - filename: initial-claim-submit.png
+      text: The student chooses how many assignments he/she is claiming on before proceeding
+    - filename: main-claim-submit.png
+      text: This is the form that the student will fill out to submit a claim
+    - filename: loginout.png
+      text: Index page of the Extenuating Circumstance Hub
+    - filename: registrationpage.png
+      text: Form to register for the Extenuating Circumstance Hub
+    - filename: single-claim-view.png
+      text: Upon clicking on a claim this it what the student will see
+    - filename: stats-bar-graph.png
+      text: Bar graph claim statistics retrieved from the server
+    - filename: stats-pie-chart.png
+      text: Pie chart claim statistics retrieved from the server
