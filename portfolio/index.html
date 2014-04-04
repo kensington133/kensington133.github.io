@@ -1,4 +1,4 @@
---
+---
 layout: portfolio
 ---
 <div class="wide column">
@@ -8,7 +8,7 @@ layout: portfolio
 			<h2 itemprop="name headline">{{ post.title }}</h2>
 			{% if page.galleryid %}
 				{% if gallery.id == page.galleryid %}
-					<ul>
+					<ul class='list no_bullets'>
 						{% for image in gallery.images %}
 							<li>
 							<img src="{{ gallery.imagefolder }}/{{ image.filename }}">
