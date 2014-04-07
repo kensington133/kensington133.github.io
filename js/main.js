@@ -228,7 +228,9 @@ function closeGallery()
 
 function handleCaption()
 {
+	//add margin top which is window height / 2 which is the gap then add on the height of the image
 	var yOffset = (($(window).height() - $('.full_image').height())/2) + $('.full_image').height();
+	//take the winow width off the image width to get the gap and apply that number to the caption
 	var xOffset = (($(window).width() - $('.full_image').width())/2);
 
 	$('.image_caption').css("marginLeft", ""+xOffset+"px");
