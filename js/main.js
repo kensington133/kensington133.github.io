@@ -119,10 +119,40 @@ function sendEmail()
 				data: $(form).serialize(),
 				success: function(data)
 				{
-					$('.loading').fadeOut( function(){
-						$('.success').fadeIn();
-					});
 
+					console.log(data);
+					if(data == 'error')
+					{
+						$('.loading').fadeOut( function(){
+							$('.fail').fadeIn();
+						});
+					}
+					else
+					{
+
+					}
+					var error = data.split(':');
+					//in progresss
+					/*console.log(error);
+					errStr = "Unfortunately there was an error \n";
+					switch(error)
+					{
+						case 'name':
+							errStr += ''
+						break;
+						case 'message':
+
+						break
+						case 'email':
+
+						break
+						case 'spamorempty':
+
+						break
+						case 'nopost':
+
+						break
+					}*/
 				},
 				fail: function()
 				{
