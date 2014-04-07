@@ -208,9 +208,12 @@ function showGallery(highresURL, caption)
 	$('body').scrollTop(0);
 	$('.gallery_overlay').fadeIn( function() {
 		$('.full_image').attr('src', highresURL);
-		$('.image_caption').text(caption);
+		$('.image_caption').html(caption);
 		$('body').css({overflow: 'hidden'});
+		handleCaption();
 	});
+
+
 }
 
 function closeGallery()
@@ -218,6 +221,15 @@ function closeGallery()
 	$('.gallery_overlay').fadeOut();
 	$('body').css({overflow: 'auto'});
 	$('.full_image').attr('src', '');
-	$('.caption').text('');
+	$('.caption').html('');
 }
 
+function handleCaption()
+{
+	$('.full_image').load( function(){
+		var imageWidth = $('.full_image').width();
+		console.log(imageWidth);
+		$('.image_caption').width(imageWidth);
+	});
+
+}

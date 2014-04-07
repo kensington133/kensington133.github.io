@@ -653,6 +653,7 @@ ul.list.no_bullets
 .gallery_thumb
 {
 	float: left;
+	height: 270px;
 	overflow: hidden;
 	padding: 5px;
 	margin: 5px;
@@ -680,7 +681,8 @@ ul.list.no_bullets
 {
 	position: fixed;
 	max-width: 100%;
-	max-height: 80%;
+	max-height: 90%;
+	margin-bottom: 5%;
 	left: 50%;
 	top: 50%;
 	display: block;
@@ -693,12 +695,24 @@ ul.list.no_bullets
 }
 .image_caption
 {
-	position: absolute;
-	top: 200px;
-	left: 0px;
-	width: 100%;
+	position: fixed;
+	top: 94%;
+	left: 50%;
 	color: #fff;
 	text-align: center;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-moz-border-radius-bottomright: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	background: #45b29d;
+	padding: 5px 10px;
 }
 .close
 {
