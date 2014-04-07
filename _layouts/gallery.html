@@ -6,14 +6,19 @@
 
 	<p>Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
 
+	{% if page.galleryid %}
 	<h2>Gallery</h2>
 	{% for gallery in site.data.galleries %}
-	{% if page.galleryid %}
+
 		{% if gallery.id == page.galleryid %}
 		<div class="loading form_control">
 				<p>Loading...</p>
 				<i class="fa fa-cog fa-5x fa-spin"></i>
-			</div>
+		</div>
+		<div class="fail hide form_control">
+			<p>Something went wrong, please try again.</p>
+			<i class="fa fa-meh-o fa-5x"></i>
+		</div>
 		<div class="gallery">
 			<ul class='list no_bullets'>
 				{% for image in gallery.images %}
@@ -27,7 +32,7 @@
 		</div>
 		<div class="clear"></div>
 		{% endif %}
-	{% endif %}
 	{% endfor %}
+	{% endif %}
 
 {% include footer.html %}

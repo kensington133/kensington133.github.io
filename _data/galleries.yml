@@ -1,24 +1,24 @@
 - id: shoreline
   description: Shoreline Extreme Sports
   imagefolder: /assets/shoreline/
-  thumbfolder: /assests/shoreline/thumbs/
+  thumbfolder: /assets/shoreline/thumbs/
   images:
   - filename: shorelineactivitieshomepage.png
     text: 'Shoreline is an extreme sports provider in Bude, Cornwall'
-  - filename: shorelineactivitiespayment.png
+  - filename: shorelineeventpayments.png
     text: 'Payments page linked to PayPal so that customers can pay for activities'
-  - filename: shorelineaeventspayment.png
+  - filename: shorelineeventpayments.png
     text: 'Payments page linked to PayPal to pay for events like the triathlon'
-  - filename: 'shorelineaeventspage.png'
+  - filename: shorelineeventspage.png
     text: 'Page showing the a list of all the events that shoreline offers'
-  - filename: 'shorelinehomepage.png'
+  - filename: shorelinehomepage.png
     text: 'Shoreline is an extreme sports provider in Bude, Cornwall'
 - id: ajpaving
   description: AJ Paving Bude
   imagefolder: /assets/ajpaving/
-  thumbfolder: /assests/shoreline/ajpaving/
+  thumbfolder: /assets/ajpaving/thumbs/
   images:
-  - filename: ajpaving.jpg
+  - filename: ajpaving.png
     text: 'AJ Paving in Bude, Cornwall'
   - filename: contact-form.png
     text: 'PHP contact form to allow potential clients to get in touch with AJ Paving'
@@ -29,7 +29,7 @@
 - id: budezest
   description: BudeZest Construction
   imagefolder: /assets/budezest/
-  thumbfolder: /assests/budezest/thumbs/
+  thumbfolder: /assets/budezest/thumbs/
   images:
   - filename: budezest-carpentry.png
     text: 'Carpentry page showing of a variety of different carpentry methods'
