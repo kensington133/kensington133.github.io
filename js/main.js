@@ -65,7 +65,6 @@ function handleContentHeight(){
 
 	//sets the overlapping backgrounds the the window height
 	$('.overlap').height(documentHeight);
-	$('.gallery_overlay').height(documentHeight);
 
 	//if the content is less then the window set it to the window height
 	if(contentHeight < viewableHeight)
@@ -207,7 +206,13 @@ function showGallery(highresURL, caption)
 {
 	//bodge until I can get the text/image to show in window I clicked
 	//probably due to height being doc height now window height ;)
-	$('body').scrollTop(0);
+	var windowHeight = $(window).height();
+	var margin = $('body').scrollTop();
+	$('.gallery_overlay').css({
+		height: windowHeight,
+		marginTop: margin
+	});
+
 	$('.gallery_overlay').fadeIn( function() {
 		$('.full_image').attr('src', highresURL);
 		$('.image_caption').html(caption);
