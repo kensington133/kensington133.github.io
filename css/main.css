@@ -693,6 +693,10 @@ ul.list.no_bullets
 }
 .image_caption
 {
+	position: absolute;
+	top: 200px;
+	left: 0px;
+	width: 100%;
 	color: #fff;
 	text-align: center;
 }
