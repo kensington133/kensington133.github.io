@@ -218,6 +218,6 @@ function closeGallery()
 	$('.gallery_overlay').fadeOut();
 	$('body').css({overflow: 'auto'});
 	$('.full_image').attr('src', '');
-	$('.caption').text(' ');
+	$('.caption').text('');
 }
 

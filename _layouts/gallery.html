@@ -4,7 +4,7 @@
 
 	{{ content }}
 
-	<p>Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+	<p class="blog_date">Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
 
 	{% if page.galleryid %}
 	<h2>Gallery</h2>
