@@ -44,7 +44,7 @@
                       '<a href="#" class="lightbox-previous lightbox-button">&laquo;</a>' +
                       '<a href="#" class="lightbox-next lightbox-button">&raquo;</a>' +
                       '</div>' +
-                      '<div href="#" class="lightbox-caption"><p></p></div>' +
+                      '<div class="lightbox-caption"><p></p></div>' +
                       '</div>'
                     );
 
