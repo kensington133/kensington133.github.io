@@ -4,56 +4,12 @@ $(document).ready( function(){
 	typeAhead();
 	sendEmail();
 	handleActive();
-	// handleGalleryLoading();
-	// handleGallery();
-	handleGallery()
+	handleGallery();
 });
 
 $(window).resize(function(){
 	handleContentHeight();
-	// handleCaption();
 });
-
-//super handy image pre-loader
-;(function ($)
-{
-  $.imageloader = function(userOptions)
-  {
-
-        var options = $.extend({
-            urls: [],
-            onComplete: function() {},
-            onUpdate: function(ratio, image) {},
-            onError: function(err) {}
-        }, userOptions);
-
-        var loadCount = 0,
-            completedUrls = [],
-            urls = options.urls,
-            len = urls.length;
-
-        $.each(urls, function(i, item)
-        {
-                var img = new Image(), error = false;
-                img.src = item;
-                img.onerror = function() {
-                  loadCount++;
-                  options.onError('Error loading image: ' + item);
-                };
-
-                $('<img/>').attr('src', item).load(function(res)
-                {
-
-                        loadCount++;
-                        options.onUpdate(loadCount/len, urls[loadCount-1]);
-
-                        if (loadCount === len) options.onComplete();
-                });
-        });
-
-  };
-
-})(jQuery);
 
 function handleContentHeight(){
 
@@ -160,102 +116,8 @@ function handleActive()
 	});
 }
 
+//gallery: https://github.com/duncanmcdougall/Responsive-Lightbox
 function handleGallery()
 {
 	$('.gallery a').lightbox();
 }
-/*function handleGalleryLoading()
-{
-	var images = [];
-	$(".gallery_thumb").each( function(){
-		var src = $(this).find("img").attr("src")
-		images.push(src);
-	});
-
-	$.imageloader({
-		urls: images,
-		onComplete: function(images)
-		{
-			$('.loading').fadeOut( function() {
-				$('.gallery').fadeIn();
-				handleContentHeight();
-			});
-
-		},
-		onError: function()
-		{
-			$('.loading').fadeOut( function() {
-				$('.gallery').hide();
-				$('.fail').fadeIn();
-				handleContentHeight();
-			});
-		}
-	});
-}
-
-function handleGallery()
-{
-	$('.gallery_thumb').click( function() {
-
-		var highresURL = $(this).data('highres');
-		var caption = $(this).data('caption');
-
-		showGallery(highresURL, caption);
-	});
-
-	$('.close').click( function() {
-		closeGallery();
-	});
-
-	$(document).keyup( function(evt){
-		if(evt.keyCode == 27)
-		{
-			closeGallery();
-		}
-	})
-}
-
-function showGallery(highresURL, caption)
-{
-	//bodge until I can get the text/image to show in window I clicked
-	//probably due to height being doc height now window height ;)
-	var windowHeight = $(window).height();
-	var margin = $('body').scrollTop();
-	$('.gallery_overlay').css({
-		height: windowHeight,
-		marginTop: margin
-	});
-
-	$('.gallery_overlay').fadeIn( function() {
-		$('.full_image').attr('src', highresURL);
-		$('.image_caption').html(caption);
-		$('body').css({overflow: 'hidden'});
-		handleCaption();
-	});
-}
-
-function closeGallery()
-{
-	$('.gallery_overlay').fadeOut();
-	$('body').css({overflow: 'auto'});
-	$('.full_image').attr('src', '');
-	$('.caption').html('');
-}
-
-function handleCaption()
-{
-	//add margin top which is window height / 2 which is the gap then add on the height of the image
-	var yOffset = (($(window).height() - $('.full_image').height())/2) + $('.full_image').height();
-	//take the winow width off the image width to get the gap and apply that number to the caption
-	var xOffset = (($(window).width() - $('.full_image').width())/2);
-
-	$('.image_caption').css("marginLeft", ""+xOffset+"px");
-	$('.image_caption').css("marginTop", ""+yOffset+"px");
-
-	$('.full_image').load( function(){
-		var imageWidth = $('.full_image').width();
-		$('.image_caption').css({maxWidth: imageWidth+'px'});
-
-		handleCaption();
-	});
-}*/
