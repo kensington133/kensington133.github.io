@@ -104,6 +104,7 @@ function sendEmail()
 
 function handleActive()
 {
+	var prevPage = document.referrer;
 	var currentPage = window.location.pathname
 	var menu = $('.menu_item');
 

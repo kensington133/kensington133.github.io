@@ -242,6 +242,7 @@ ul.list.no_bullets
 /********* MENU ****************/
 .menu
 {
+	display: block;
 	height: 100%;
 	position: fixed;
 	width: 180px;
@@ -667,6 +668,7 @@ ul.list.no_bullets
 	.menu
 	{
 		width: 125px;
+		display: block;
 	}
 	.menu i
 	{
