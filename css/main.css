@@ -546,25 +546,13 @@ ul.list.no_bullets
 {
 	margin-bottom: 15px;
 }
-.post_item
+/*.post_item
 {
 	border-bottom: 3px solid #45b29d;
-	-webkit-border-radius: 4px;
-	-moz-border-radius:    4px;
-	border-radius:         4px;
 	margin-bottom: 20px;
 	padding: 5px;
-}
+}*/
 
-.tag_item
-{
-	border: 3px solid #334d5c;
-	-webkit-border-radius: 4px;
-	-moz-border-radius:    4px;
-	border-radius:         4px;
-	padding: 5px 10px;
-
-}
 .text_input
 {
 	display: block;
@@ -592,7 +580,6 @@ ul.list.no_bullets
 .text_input.long
 {
 	height: 200px;
-	max-width: 616px;
 	width: 100%;
 }
 .submit

@@ -1,10 +1,7 @@
 
 <h3>Recent Posts</h3>
 
-<div class="post_search">
-	<input type="text" id='search' placeholder='search posts' />
-</div>
-<div class="clear"></div>
+{% include search.html %}
 <ul class='list no_bullets'>
 	{% for post in site.posts limit:6 %}
 		<a class='sidebar_link' href="{{ post.url }}">

@@ -3,6 +3,7 @@ layout: default
 ---
 <div class="full column">
 	<h1>My Posts</h1>
+	{% include search.html %}
 	{% for post in site.posts %}
 		<div class="post_item">
 			<div class="super_wide column">
@@ -22,6 +23,7 @@ layout: default
 			</div>
 			<div class="clear"></div>
 		</div>
+		<hr>
 	{% endfor %}
 	</ul>
 </div>

@@ -119,40 +119,19 @@ function sendEmail()
 				data: $(form).serialize(),
 				success: function(data)
 				{
-
-					console.log(data);
+					//something went wrong sending the email
 					if(data == 'error')
 					{
-						$('.loading').fadeOut( function(){
+						$('.loading').fadeOut( function() {
 							$('.fail').fadeIn();
 						});
 					}
 					else
 					{
-
+						$('.loading').fadeOut( function() {
+							$('.success').fadeIn();
+						});
 					}
-					var error = data.split(':');
-					//in progresss
-					/*console.log(error);
-					errStr = "Unfortunately there was an error \n";
-					switch(error)
-					{
-						case 'name':
-							errStr += ''
-						break;
-						case 'message':
-
-						break
-						case 'email':
-
-						break
-						case 'spamorempty':
-
-						break
-						case 'nopost':
-
-						break
-					}*/
 				},
 				fail: function()
 				{
@@ -178,7 +157,6 @@ function handleActive()
 			$(this).addClass('selected');
 		}
 	});
-
 }
 
 function handleGalleryLoading()
