@@ -1,5 +1,5 @@
 kensington133.github.io
 =======================
-My portfolio website
+My portfolio Website
 
-Currently hosted with a hosting company but I will switch to Github pages when my renewal is due next
+Any comments and suggestions are welcome :)
