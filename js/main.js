@@ -121,6 +121,6 @@ function handleActive()
 function handleGallery()
 {
 	$('.gallery a').lightbox({
-		blur: false
+		// blur: false
 	});
 }
