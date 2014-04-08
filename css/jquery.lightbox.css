@@ -75,7 +75,7 @@ body.blurred > * {
 	transition: 		all 0.3s;
 	 -webkit-font-smoothing: subpixel-antialiased;
 	 backface-visibility: hidden;
-	 transform: translateZ(0);
+	 /*transform: translateZ(0);*/
 }
 
 .lightbox-button:hover,
