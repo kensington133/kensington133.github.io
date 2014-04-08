@@ -11,25 +11,25 @@
 	{% for gallery in site.data.galleries %}
 
 		{% if gallery.id == page.galleryid %}
-		<div class="loading form_control">
+		<!-- <div class="loading form_control">
 				<p>Loading...</p>
 				<i class="fa fa-cog fa-5x fa-spin"></i>
 		</div>
 		<div class="fail hide form_control">
 			<p>Something went wrong, please try again.</p>
 			<i class="fa fa-meh-o fa-5x"></i>
-		</div>
-		<div class="gallery">
-			<ul class='list no_bullets'>
+		</div> -->
+		<!-- <div class="gallery"> -->
+			<ul class='list no_bullets gallery'>
 				{% for image in gallery.images %}
-					<li>
-						<div class="gallery_thumb" data-caption='{{ image.text }}' data-highres='{{ gallery.imagefolder }}{{ image.filename }}'>
-							<img class='gallery_image' src="{{ gallery.thumbfolder }}{{ image.filename }}">
-						</div>
+					<li class='gallery_thumb'>
+						<a href="{{gallery.imagefolder}}{{image.filename}}" data-caption="{{image.text}}">
+							<img src="{{ gallery.thumbfolder }}{{ image.filename }}">
+						</a>
 					</li>
 				{% endfor %}
 			</ul>
-		</div>
+		<!-- </div> -->
 		<div class="clear"></div>
 		{% endif %}
 	{% endfor %}

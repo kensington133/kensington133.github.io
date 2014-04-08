@@ -4,13 +4,14 @@ $(document).ready( function(){
 	typeAhead();
 	sendEmail();
 	handleActive();
-	handleGalleryLoading();
-	handleGallery();
+	// handleGalleryLoading();
+	// handleGallery();
+	handleGallery()
 });
 
 $(window).resize(function(){
 	handleContentHeight();
-	handleCaption();
+	// handleCaption();
 });
 
 //super handy image pre-loader
@@ -159,7 +160,11 @@ function handleActive()
 	});
 }
 
-function handleGalleryLoading()
+function handleGallery()
+{
+	$('.gallery a').lightbox();
+}
+/*function handleGalleryLoading()
 {
 	var images = [];
 	$(".gallery_thumb").each( function(){
@@ -227,8 +232,6 @@ function showGallery(highresURL, caption)
 		$('body').css({overflow: 'hidden'});
 		handleCaption();
 	});
-
-
 }
 
 function closeGallery()
@@ -255,4 +258,4 @@ function handleCaption()
 
 		handleCaption();
 	});
-}
+}*/

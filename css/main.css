@@ -621,7 +621,8 @@ ul.list.no_bullets
 	color: #e74c3c;
 }
 /******** GALLERY ********/
-.gallery_overlay
+
+/*.gallery_overlay
 {
 	position: absolute;
 	top: 0px;
@@ -636,7 +637,7 @@ ul.list.no_bullets
 	overflow: hidden;
 	margin-bottom: 30px;
 	display: none;
-}
+}*/
 .gallery_thumb
 {
 	float: left;
@@ -663,6 +664,7 @@ ul.list.no_bullets
 	-moz-border-radius:    6px;
 	border-radius:         6px;
 }
+/*
 .full_image
 {
 	position: fixed;
@@ -708,7 +710,7 @@ ul.list.no_bullets
 	margin-right: 40px;
 	margin-top: 20px;
 	cursor: pointer;
-}
+}*/
 
 .yellow
 {
