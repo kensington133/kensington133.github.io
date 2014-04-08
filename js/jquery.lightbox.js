@@ -72,7 +72,7 @@
                 var img = $('<img src="' + $(plugin.current).attr('href') + '" draggable="false">');
 
                 $(img).load(function () {
-                    // $('.lightbox-loading').remove();
+                    $('.lightbox-loading').remove();
                     plugin.lightbox.append(img);
                     plugin.image = $("img", plugin.lightbox).hide();
                     plugin.resizeImage();
