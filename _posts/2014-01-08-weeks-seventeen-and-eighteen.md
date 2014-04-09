@@ -3,4 +3,4 @@ layout: post
 title: Weeks Seventeen and Eighteen
 tags: placement_year
 ---
-<p>Christmas and New Years Holiday</p>
+Christmas and New Years Holiday
