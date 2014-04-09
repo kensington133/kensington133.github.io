@@ -120,7 +120,5 @@ function handleActive()
 //gallery: https://github.com/duncanmcdougall/Responsive-Lightbox
 function handleGallery()
 {
-	$('.gallery a').lightbox({
-		// blur: false
-	});
+	$('.gallery a').lightbox();
 }
