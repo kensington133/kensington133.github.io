@@ -62,3 +62,40 @@
       text: Bar graph claim statistics retrieved from the server
     - filename: stats-pie-chart.png
       text: Pie chart claim statistics retrieved from the server
+- id: heybenshort
+  description: heybenshort Portfolio Website
+  imagefolder: /assets/heybenshort/
+  thumbfolder: /assets/heybenshort/thumbs/
+  images:
+  - filename: design-1.png
+    text: 'My initial design, started off with ideas about a parallax scrolling website'
+  - filename: design-2.png
+    text: 'My second design, based on my old website, the gallery was taken from the old website as well'
+  - filename: design-3.png
+    text: 'My third desgin added some more text and the image from my old website'
+  - filename: design-4.png
+    text: 'My fourth design got rid of the gallery as that is what a portfolio gallery is for'
+  - filename: design-5.png
+    text: 'My fifth design incorporated some blog and portfolio sliders showing recent blog posts and portfolio entries'
+  - filename: design-6.png
+    text: 'My sixth design added some buttons to the slider as it was unclear how the user was going to navigate the slider'
+  - filename: design-7.png
+    text: 'My seventh design re-aligned the heading text as it was a bit odd being on the right hand side'
+  - filename: design-8.png
+    text: 'For my eighth design I thought there was too much blue so I added some gold/orange to the sliders'
+  - filename: design-9.png
+    text: 'Design nine includes various alignment adjustments and giving the sliders an opaque effect'
+  - filename: design-10.png
+    text: 'This design incorporates the new colour scheme that was created on the Adobe Kuler website'
+  - filename: design-11.png
+    text: 'In design eleven I started to experiment with the layered affect on the side of the content which I had seen on some websites previously'
+  - filename: design-12.png
+    text: 'Design twelve saw in introduction of a side bar with the idea of the menu being placed in this section'
+  - filename: design-13.png
+    text: 'In design thirteen I increased the width of the siderbar and decreased the gap between it and the content'
+  - filename: design-14.png
+    text: 'In Design fourteen I added some spacing between the edge of the sider bar and the edge of the page allowing the content to be scalable on larger screens'
+  - filename: design-15.png
+    text: 'My fifteenth design saw the inclusion of the menu'
+  - filename: design-16.png
+    text: 'My final design shows the overlapping effect on the menu items and what a current page highlight would look like'
