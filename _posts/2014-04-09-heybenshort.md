@@ -1,6 +1,6 @@
 ---
 layout: gallery
-title: heybenshort.co.uk
+title: Personal Portfolio
 tags: portfolio
 galleryid: heybenshort
 ---
