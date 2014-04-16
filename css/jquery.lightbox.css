@@ -18,14 +18,7 @@
 	-moz-border-radius:    6px;
 	border-radius:         6px;
 }
-.wrapper.blurred > * {
-	-webkit-filter: blur(3px);
-	-moz-filter: blur(3px);
-	-o-filter: blur(3px);
-	-ms-filter: blur(3px);
-	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
-	filter: blur(3px);
-}
+
 .lightbox-loading {
 	color: #fff;
 	width: 55px;
@@ -106,4 +99,16 @@
 	left: 10px;
 	top: 48%;
 	line-height: 45px;
+}
+
+/*only show blur on table and above, weird android bug*/
+@media only screen and (min-width: 650px) {
+	body.blurred > * {
+		-webkit-filter: blur(3px);
+		-moz-filter: blur(3px);
+		-o-filter: blur(3px);
+		-ms-filter: blur(3px);
+		filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+		filter: blur(3px);
+	}
 }

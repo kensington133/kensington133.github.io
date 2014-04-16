@@ -64,8 +64,8 @@
 
             loadImage: function () {
                 if(opts.blur) {
-                    // $("body").addClass("blurred");
-                    $(".content").addClass("blurred");
+                    $("body").addClass("blurred");
+                    // $(".content").addClass("blurred");
                 }
                 $("img", plugin.lightbox).remove();
                 plugin.lightbox.fadeIn('fast').append('<span class="lightbox-loading"><i class="fa fa-cog fa-4x fa-spin"></i></span>');
@@ -208,8 +208,8 @@
             close: function () {
                 $(document).off('keydown'); // Unbind all key events each time the lightbox is closed
                 $(plugin.lightbox).fadeOut('fast');
-                // $('body').removeClass('blurred');
-                $('.content').removeClass('blurred');
+                $('body').removeClass('blurred');
+                // $('.content').removeClass('blurred');
             }
         };
 

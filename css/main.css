@@ -15,11 +15,12 @@ body
 	background: #df5a49;
 	font: 16px/24px 'Lato', sans-serif;
 	z-index: 10;
+	-webkit-font-smoothing:antialiased;
 }
 h1, h2, h3, h4, h5, h6
 {
 	color: #45b29d;
-	font-weight: 400;
+	font-weight: normal;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 {
@@ -248,7 +249,7 @@ ul.no_bullets
 	width: 180px;
 	padding-top: 120px;
 	background: #334d5c;
-	font-weight: 200;
+	font-weight: 400;
 }
 .menu_list
 {
@@ -276,7 +277,8 @@ ul.no_bullets
 }
 .menu_item.selected
 {
-	font-weight: 400;
+	/*font-weight: 600;*/
+	text-decoration: underline;
 }
 .menu_text
 {
