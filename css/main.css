@@ -598,6 +598,16 @@ ul.no_bullets
 {
 	color: #e74c3c;
 }
+.highlight
+{
+	overflow: scroll;
+	border: 1px solid #45b29d;
+	padding: 5px 10px;
+	margin-bottom: 20px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius:    6px;
+	border-radius:         6px;
+}
 /******** GALLERY ********/
 .gallery_thumb
 {
