@@ -137,6 +137,7 @@ a
 a:hover
 {
 	color: #0784a1;
+	text-decoration: underline;
 }
 a:visited
 {
