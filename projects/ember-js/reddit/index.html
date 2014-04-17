@@ -60,7 +60,6 @@ layout: default
 				</div>
 				{{#if post.thumbnail}}
 				<div class='left hide-for-small'>
-				<!-- <img class='thumb' src="{{unbound post.thumbnail}}" /> -->
 					{{sortThumbs post}}
 				</div>
 				{{/if}}
@@ -70,8 +69,6 @@ layout: default
 				<div class='clear'></div>
 				<hr>
 				<div class='bottom'>
-				<!-- <small class="left" {{action 'getComments' post}}>{{post.num_comments}} comments</small> -->
-					<small class="left">{{#link-to 'comments' post}}{{post.num_comments}} comments{{/link-to}}</small>
 					<small class='right'>{{formatDate post}} by <a href="http://reddit.com/user/{{unbound post.author}}">{{post.author}}</a></small>
 				</div>
 			</div>

@@ -1,0 +1,14 @@
+{% include header.html %}
+<a href="/projects/" class="button">&laquo; Back</a>
+<div class="wide column">
+	<h1 itemprop="name headline">{{page.title}}</h1>
+
+        {{ content }}
+
+        <p>Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string }}</time></p>
+</div>
+
+<div class="narrow column">
+	{% include sidebar.html %}
+</div>
+{% include footer.html %}

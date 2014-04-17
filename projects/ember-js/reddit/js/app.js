@@ -1,8 +1,8 @@
 App = Ember.Application.create({rootElement: '#app'});
 
-App.Router.map(function() {
+/*App.Router.map(function() {
 	this.route("comments", {path: '/comments/:post_id'});
-});
+});*/
 
 App.IndexRoute = Ember.Route.extend({
 	  model: function() {
@@ -11,13 +11,14 @@ App.IndexRoute = Ember.Route.extend({
 	  }
 });
 
-App.CommentsRoute = Ember.Route.extend({
+/*App.CommentsRoute = Ember.Route.extend({
 	model: function(params) {
-		// return App.Item.comments();
-		return ['red', 'yellow', 'blue'];
+		handleContentHeight();
+		return App.Item.comments();
+		// return ['red', 'yellow', 'blue'];
 	}
 })
-
+*/
 App.Item = Ember.Object.extend();
 App.Item.reopenClass({
 	all: function() {
@@ -39,8 +40,10 @@ App.Item.reopenClass({
 
 		})
 	},
-	comments: function() {
+	/*comments: function() {
 			//var commentLink = post.get('permalink');
+
+			handleContentHeight();
 
 			return ['yellow', 'red', 'blue'];
 			/*return $.getJSON("http://reddit.com"+commentLink+".json?jsonp=?").then(function(response) {
@@ -56,8 +59,8 @@ App.Item.reopenClass({
 				console.log(items);
 				return items;
 
-			});*/
-		}
+			});
+		}*/
 });
 
 App.IndexController = Ember.ObjectController.extend({
@@ -80,7 +83,7 @@ App.IndexController = Ember.ObjectController.extend({
 				}
 				console.log(items);
 				return items;
-
+				handleContentHeight();
 			});
 		}
 	}
