@@ -60,11 +60,6 @@ h6
 	font-size: 14px;
 	line-height: 21px;
 }
-.title_inner
-{
-	font-size: 80%;
-	color: ;
-}
 p
 {
 	margin: 0 0 20px 0;
@@ -534,6 +529,7 @@ ul.no_bullets
 
 .text_input
 {
+	font-family: 'Lato', sans-serif;
 	display: block;
 	outline: none;
 	width: 100%;

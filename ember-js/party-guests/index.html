@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ember.js • Party App</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<script type="text/x-handlebars" data-template-name="todos/index">
+			<ul id="todo-list">
+				{{#each itemController="todo"}}
+					<li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
+						{{#if isEditing}}
+							{{edit-todo class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"}}
+						{{else}}
+							{{input type="checkbox" checked=isCompleted class="toggle"}}
+							<label {{action "editTodo" on="doubleClick"}}>{{title}}</label>
+							<button {{action "removeTodo"}} class="destroy"></button>
+						{{/if}}
+					</li>
+				{{/each}}
+			</ul>
+		</script>
+		<script type="text/x-handlebars" data-template-name="todos">
+		<section id="todoapp">
+			<header id="header">
+				<h1>Party Guests</h1>
+				{{input type="text" id="new-todo" placeholder="Add a new guest" value=newTitle action="createTodo"}}
+			</header>
+
+			<section id="main">
+				{{outlet}}
+				{{input type="checkbox" id="toggle-all" checked=allAreDone}}
+			</section>
+
+			<footer id="footer">
+				<span id="todo-count">
+				<strong>{{remaining}}</strong> {{inflection}} coming
+				</span>
+				<ul id="filters">
+					<li>
+						{{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
+					</li>
+					<li>
+						{{#link-to "todos.completed" activeClass="selected"}}Attending{{/link-to}}
+					</li>
+					<li>
+						{{#link-to "todos.active" activeClass="selected"}}Not Attending{{/link-to}}
+					</li>
+				</ul>
+
+				{{#if hasCompleted}}
+				<button id="clear-completed" {{action "clearCompleted"}}>
+					Remove non atendees {{completed}}
+				</button>
+				{{/if}}
+			</footer>
+		</section>
+
+		<footer id="info">
+			<p>Double-click to edit a name</p>
+			<p>Adaptation of the Ember.js <a href="http://emberjs.com/guides/getting-started/">Tutorial</a></p>
+		</footer>
+		</script>
+
+		<script src="js/libs/jquery-1.10.2.js"></script>
+		<script src="js/libs/handlebars-1.1.2.js"></script>
+		<script src="js/libs/ember.js"></script>
+		<script src="js/libs/ember-data.js"></script>
+		<script src="js/libs/localstorage_adapter.js"></script>
+
+		<script src="js/application.js"></script>
+		<script src="js/router.js"></script>
+		<script src="js/models/todo.js"></script>
+		<script src="js/controllers/todos_controller.js"></script>
+		<script src="js/views/edit_todos_view.js"></script>
+	</body>
+</html>
