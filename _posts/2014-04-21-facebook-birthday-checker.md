@@ -15,4 +15,6 @@ Finally to get the users birthday posts I had to format the two date ranges into
 
 The final request to get the users birthday feed looks like `/me/feed?since={recent birthday}&until={recent birthday +1 day}`. this allowed me to retrieve the currently logged in users posts from his/her birthday. I also added the extra parameter `{fields: message, from}` this will tell the api only to return the message and from fields from the graph api call.
 
+After I got the data displaying nicely on the page and fading in and out, I decided to create a search bar so people can search the names of the people in the list that is returned from facebook. I created the search functionality using the jQuery `:contains()` selector and the `.keyup()` function. This allows the users to search through all of the names that the api finds and hides and shows the corresponding people.
+
 <a class="button" href='{{site.url}}projects/birthday-checker/'>View the Facebook Birthday Post Checker</a>
