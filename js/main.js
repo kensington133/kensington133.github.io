@@ -166,7 +166,6 @@ function loadFacebook()
 function getBirthdayData() {
 
 	FB.api('/me', function(response) {
-		console.log(response);
 
 		var name = response.name;
 		var username = response.username;
@@ -243,16 +242,16 @@ function searchPeople()
                         // items.filter(':contains('+value+')').parent().parent().css('background', 'red');
                         // items.filter(':not(:contains('+value+'))').parent().parent().css('background', '');
 
-                        items.filter(':contains('+value+')').parent().parent().show( function(){
+                        items.filter(':contains('+value+')').parent().parent().parent().show( function(){
                         	handleContentHeight();
                         })
-                        items.filter(':not(:contains('+value+'))').parent().parent().hide(function(){
+                        items.filter(':not(:contains('+value+'))').parent().parent().parent().hide(function(){
                         	handleContentHeight();
                         })
                 }
                 else
                 {
-                        items.parent().parent().show	(function(){
+                        items.parent().parent().parent().show	(function(){
                         	handleContentHeight();
                         })
                 }
