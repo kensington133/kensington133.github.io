@@ -846,3 +846,35 @@ ul.no_bullets
 		max-width: 742px;
 	}
 }
+
+/******** FACEBOOK PAGE ***********/
+#fb-root
+{
+	display: none;
+}
+.text,
+.fb_img
+{
+	float: left;
+}
+.date_posted
+{
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 0px;
+}
+.fb_img
+{
+	width: 50px;
+	margin-right: 10px;
+}
+.panel
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d9d9d9;
+	margin-bottom: 1.25rem;
+	padding: 1.25rem;
+	background: #f2f2f2;
+	overflow: hidden;
+}
