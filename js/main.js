@@ -204,6 +204,8 @@ function getBirthdayData() {
 					{
 						count++;
 						var message = messageData;
+						var inflection = (count > 1)? ' people ': ' person ';
+						$('.birthday_stats').html(count+inflection+'posted on your wall for your birthday');
 
 						$('#fb-root').append("<div class='person'><div class='fb_img'><img src='http://graph.facebook.com/"+user_id+"/picture?type=square' /></div><div class='text'><a href='https://facebook.com/"+user_id+"' target='_blank' title='View "+name+"s profile'><h4>"+name+"</h4></a><p>"+message+"</p></div><div class='clear'></div><p class='date_posted'>Posted: "+posted_on+"</p></div>");
 
