@@ -139,13 +139,15 @@ function loadFacebook()
 		switch(response.status)
 		{
 			case 'connected':
-				getBirthdayData();
+				initFBPage()
 			break;
 			case 'not_authorized':
 				FB.login();
+				removeBirthdayData();
 			break;
 			default:
 				FB.login();
+				removeBirthdayData();
 			break;
 		}
 	});
@@ -164,7 +166,10 @@ function loadFacebook()
 function getBirthdayData() {
 
 	FB.api('/me', function(response) {
+		console.log(response);
 
+		var name = response.name;
+		var username = response.username;
 		var birthday = moment(response.birthday, 'MM/DD/YYYY');
 		var curDate = moment();
 
@@ -179,7 +184,7 @@ function getBirthdayData() {
 		var since = epocBirthday.format('X');
 		var until = epocBirthday.add('d', 1).format('X');
 
-
+		$('.fb_username').html(name+"'s ");
 
 		FB.api('/me/feed?since='+since+'&until='+until, {fields: 'message, from'} ,function(response) {
 
@@ -201,12 +206,15 @@ function getBirthdayData() {
 						count++;
 						var message = messageData;
 
-						$('#fb-root').append("<div class='person panel'><div class='fb_img'><img src='http://graph.facebook.com/"+user_id+"/picture?type=square' /></div><div class='text'><h4>"+name+"</h4><p>"+message+"</p></div><div class='clear'></div><p class='date_posted'>Posted: "+posted_on+"</p></div>");
+						$('#fb-root').append("<div class='person'><div class='fb_img'><img src='http://graph.facebook.com/"+user_id+"/picture?type=square' /></div><div class='text'><a href='https://facebook.com/"+user_id+"' target='_blank' title='View "+name+"s profile'><h4>"+name+"</h4></a><p>"+message+"</p></div><div class='clear'></div><p class='date_posted'>Posted: "+posted_on+"</p></div>");
 
-						$('#fb-root').fadeIn( function(){
-							handleContentHeight();
-							searchPeople();
+						$('.loading').fadeOut( function() {
+							$('#fb-root').fadeIn( function(){
+								handleContentHeight();
+								searchPeople();
+							});
 						});
+
 
 					}
 				}
@@ -244,9 +252,22 @@ function searchPeople()
                 }
                 else
                 {
-                        items.parent().parent().show(function(){
+                        items.parent().parent().show	(function(){
                         	handleContentHeight();
                         })
                 }
+	})
+}
+
+function removeBirthdayData()
+{
+	window.location = window.location;
+}
+
+function initFBPage()
+{
+	$('.loading').fadeIn(function(){
+		$('.name_search').fadeIn();
+		getBirthdayData();
 	})
 }
