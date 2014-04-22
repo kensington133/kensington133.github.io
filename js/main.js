@@ -123,44 +123,53 @@ function handleGallery()
 {
 	$('.gallery a').lightbox();
 }
+function getCurrentPage() {
+	var url = window.location.pathname;
+	var urlParts = url.split('/').filter( function(item){if(item !== '') return item });
 
+	return urlParts[ urlParts.length -1 ];
+}
 function loadFacebook()
 {
-	window.fbAsyncInit = function() {
-	FB.init({
-		appId      : '614464138634550',
-		status     : true, // check login status
-		cookie     : true, // enable cookies to allow the server to access the session
-		xfbml      : true  // parse XFBML
-	});
+	currentPage = getCurrentPage();
+	if(currentPage == 'birthday-checker')
+	{
+		window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '614464138634550',
+			status     : true, // check login status
+			cookie     : true, // enable cookies to allow the server to access the session
+			xfbml      : true  // parse XFBML
+		});
 
-	FB.Event.subscribe('auth.authResponseChange', function(response) {
+			FB.Event.subscribe('auth.authResponseChange', function(response) {
 
-		switch(response.status)
-		{
-			case 'connected':
-				initFBPage()
-			break;
-			case 'not_authorized':
-				FB.login();
-				removeBirthdayData();
-			break;
-			default:
-				FB.login();
-				removeBirthdayData();
-			break;
-		}
-	});
-};
+				switch(response.status)
+				{
+					case 'connected':
+						initFBPage()
+					break;
+					case 'not_authorized':
+						FB.login();
+						removeBirthdayData();
+					break;
+					default:
+						FB.login();
+						removeBirthdayData();
+					break;
+				}
+			});
+		};
 
-	// Load the SDK asynchronously
-	(function(d){
-		var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-		if (d.getElementById(id)) {return;}
-		js = d.createElement('script'); js.id = id; js.async = true;
-		js.src = "//connect.facebook.net/en_US/all.js";
-		ref.parentNode.insertBefore(js, ref);
-	}(document));
+		// Load the SDK asynchronously
+		(function(d){
+			var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement('script'); js.id = id; js.async = true;
+			js.src = "//connect.facebook.net/en_US/all.js";
+			ref.parentNode.insertBefore(js, ref);
+		}(document));
+	}
 }
 
 function getBirthdayData() {
@@ -271,4 +280,18 @@ function initFBPage()
 		$('.name_search').fadeIn();
 		getBirthdayData();
 	})
+}
+
+/******** STEAM PAGE ************/
+function getSteamData()
+{
+	$.getJSON(
+		"http://php.heybenshort.co.uk/steam/IPlayerService/GetOwnedGames/v0001/?include_appinfo=1&callback=?",
+		{
+		 	format: "jsonp"
+		},
+		function(data) {
+			console.log(data);
+		}
+	);
 }
