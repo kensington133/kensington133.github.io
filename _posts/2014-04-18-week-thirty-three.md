@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Week Twenty Three
+title: Week Thirty Three
 tags: placement_year
 ---
 This week I have worked on changing the layout of certain pages on the beach at bude [website](http://www.thebeachatbude.co.uk/), I also added some animations using jQuery to show and hide content on some [pages](http://www.thebeachatbude.co.uk/hotel.bude.cornwall).
