@@ -29,7 +29,7 @@ function getBasketCount()
 {% endhighlight %}
 
 This function makes a request to the page `getbasketcount` which is a PHP file which is a very simple page:
-{% highlight php %}
+{% highlight PHP %}
 $totalItems = count($_SESSION['basket']);
 echo $totalItems;
 {% endhighlight %}
