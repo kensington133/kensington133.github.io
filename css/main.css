@@ -157,15 +157,6 @@ ul.no_bullets
 	list-style: none;
 	margin-left: 0px;
 }
-table
-{
-	width: 100%
-	border-collapse: collapse;
-}
-thead
-{
-	border-bottom: 2px solid #e3e3e3;
-}
 .clear
 {
 	clear: both;
