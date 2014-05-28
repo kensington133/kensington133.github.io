@@ -30,8 +30,10 @@ function getBasketCount()
 
 This function makes a request to the page `getbasketcount` which is a PHP file which is a very simple page:
 {% highlight PHP %}
+<?php
 $totalItems = count($_SESSION['basket']);
 echo $totalItems;
+?>
 {% endhighlight %}
 
 The data pulled back from this page is then inserted into the html of the basket menu item which shows how many items are in the basket array.
