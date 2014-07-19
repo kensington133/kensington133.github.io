@@ -122,10 +122,10 @@
     text: 'Create Job Page - Tablet Size'
   - filename: image9.jpg
     text: 'Create Job Page - Phone Size'
-  - filename: image10.jpg
-    text: 'Job List - Full Size'
-  - filename: image11.jpg
-    text: 'Job List - Tablet Size'
+  # - filename: image10.jpg
+    # text: 'Job List - Full Size'
+  # - filename: image11.jpg
+    # text: 'Job List - Tablet Size'
   # - filename: image12.jpg
     # text: 'Job List Page - Phone Size'
   # - filename: image13.jpg
