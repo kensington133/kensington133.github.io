@@ -99,3 +99,38 @@
     text: 'My fifteenth design saw the inclusion of the menu'
   - filename: design-16.png
     text: 'My final design shows the overlapping effect on the menu items and what a current page highlight would look like'
+- id: budecomputers
+  description: Bude Computers - Repair Workshop
+  imagefolder: /assets/budecomputers/
+  thumbfolder: /assets/budecomputers/thumbs/
+  images:
+  - filename: image1.jpg
+    text: 'Home Page of the system - Full Size'
+  - filename: image2.jpg
+    text: 'Home Page of the system - Tablet Size'
+  - filename: image3.jpg
+    text: 'Home Page of the system - Phone Size'
+  - filename: image4.jpg
+    text: 'Login Page - Full Size'
+  - filename: image5.jpg
+    text: 'Login Page - Phone Size'
+  - filename: image6.jpg
+    text: 'Login Page - Tablet Size'
+  - filename: image7.jpg
+    text: 'Create Job Page - Full Size'
+  - filename: image8.jpg
+    text: 'Create Job Page - Tablet Size'
+  - filename: image9.jpg
+    text: 'Create Job Page - Phone Size'
+  - filename: image10.jpg
+    text: 'Job List - Full Size'
+  - filename: image11.jpg
+    text: 'Job List - Tablet Size'
+  - filename: image12.jpg
+    text: 'Job List Page - Phone Size'
+  - filename: image13.jpg
+    text: 'Existing Job Page - Full Size'
+  - filename: image14.jpg
+    text: 'Existing Job Page - Tablet Size'
+  - filename: image15.jpg
+    text: 'Existing Job Page - Phone Size'
