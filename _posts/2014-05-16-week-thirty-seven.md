@@ -1,6 +1,6 @@
 ---
 layout: post
-title Week Thirty Seven
+title: Week Thirty Seven
 tags: placement_year
 ---
 This week I started to create the [demo catalogue system](http://catalogue.md-softwaresystems.co.uk/) to test my new postage class.
