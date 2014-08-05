@@ -650,33 +650,15 @@ ul.no_bullets
 .footer
 {
 	margin-left: 180px;
-	height: 95px;
+	height: 40px;
 	background: #334d5c;
 	color: #fff;
 }
 .copy
 {
-	line-height: 95px;
+	line-height: 40px;
 	margin-bottom: 0px;
-}
-.footer_nav
-{
-	list-style: none;
-	text-align: right;
-	margin-right: 20px;
-	margin-left: 0px;
-	font-size: 14px;
-	margin-top: 4px;
-	line-height: 17px;
-}
-.footer_nav li
-{
-	margin-bottom: 0px;
-}
-.footer_nav a
-{
-	text-decoration: none;
-	color: #fff;
+	margin-right: 10px;
 }
 
 /*small screens*/
