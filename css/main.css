@@ -137,13 +137,15 @@ a
 a:hover
 {
 	color: #0784a1;
-	text-decoration: underline;
 }
 a:visited
 {
 	text-decoration: underline;
 }
-
+.content_inner a:not(.button):hover
+{
+	text-decoration: underline;
+}
 ul
 {
 	margin-left: 20px;
